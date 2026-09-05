@@ -1,0 +1,80 @@
+import { finalize, it, node, edge, req, FEX } from "../helpers";
+
+const A = "aerie";
+const SRC = FEX + "Dragon+Aerie";
+const i = (name: string, cat: Parameters<typeof it>[2], n: string, how: string, extra?: Parameters<typeof it>[5]) => it(A, name, cat, n, how, extra);
+
+export default finalize([5100, 950], {
+  area: {
+    id: A,
+    name: "Dragon Aerie",
+    shape: [[-300, -180], [20, -240], [300, -180], [380, 0], [280, 180], [-40, 220], [-320, 180], [-400, 0]],
+    label: [0, -140],
+    description: "Sunlit cliffs and bridges above Aldia's Keep, nested by three Guardian Dragons and eleven Crystal Lizards (SotFS). Break too many eggs and a wyvern destroys the bridge to the Dragon Shrine. The Emerald Herald gives the Aged Feather here.",
+    connections: ["aldias", "dshrine"],
+    recommendedLevel: "105 to 115",
+    source: SRC,
+  },
+  nodes: [
+    node(A, "aerie.entrance", "Elevator top & Emerald Herald", "entrance", -360, 0, "Path splits: right to the Herald's cliff, left over the bridge to the bonfire."),
+    node(A, "aerie.bonfire", "Dragon Aerie", "bonfire", -240, -100, "Across the first bridge; ladder up to the zip-line that skips the whole area."),
+    node(A, "aerie.cave", "Rupturing Hollow cave", "landmark", -100, -20, "Beyond the petrified statue bridge: Bonfire Ascetic, corrosive hollows, Crystal Lizard recess."),
+    node(A, "aerie.dragon1", "First dragon nest", "landmark", 20, -140, "Red Dragon on a loot pile: Flame Quartz Ring +2, Boltstone, Darknight Stone; Dragon Tooth in the eggs."),
+    node(A, "aerie.right_path", "Egg bridge & Dark Priestess path", "landmark", 100, 40, "Break an egg to pass; Fencer Sharron invades; Petrified Dragon Bone past the Dark Priestess."),
+    node(A, "aerie.dragon2", "Second dragon nest", "landmark", 220, -80, "Red Dragon in an open area: Magic Stone, Soul of a Great Hero, Large Soul of a Brave Warrior."),
+    node(A, "aerie.dragon3", "Third dragon nest", "landmark", 300, 100, "Ledge overlooking the third Red Dragon; Ring of the Evil Eye +1, Twinkling Titanite, six Crystal Lizards."),
+    node(A, "aerie.bridge", "Bridge to the Dragon Shrine", "landmark", 360, -140, "Long bridge (wyvern lands if too many eggs are broken); zip-line ends near here."),
+  ],
+  bonfires: [
+    { id: "aerie.bonfire", name: "Dragon Aerie", areaId: A, note: "Take the left path from the elevator, across the bridge; the bonfire is on the far side beside the zip-line ladder.", source: SRC },
+  ],
+  bosses: [],
+  items: [
+    i("Aged Feather", "tool", "aerie.entrance", "Given by the Emerald Herald on the cliff to the right of the elevator exit. Unlimited Homeward Bone."),
+    i("Soul of a Great Hero", "soul", "aerie.bonfire", "Ride the zip-line from the ladder by the bonfire and drop off mid-way onto the corpse."),
+    i("Bonfire Ascetic", "ascetic", "aerie.cave", "Inside the cave across the petrified-statue bridge (Rupturing Hollow on the left).", { prerequisites: ["Fragrant Branch of Yore (statue on the bridge) or use the bonfire ladder route"] }),
+    i("Radiant Lifegem", "lifegem", "aerie.cave", "Recess in the cave with a Crystal Lizard."),
+    i("Flame Quartz Ring +2", "ring", "aerie.dragon1", "Loot pile under the first Red Dragon."),
+    i("Soul of a Brave Warrior", "soul", "aerie.dragon1", "Loot pile under the first Red Dragon."),
+    i("Boltstone", "titanite", "aerie.dragon1", "Loot pile under the first Red Dragon."),
+    i("Darknight Stone", "titanite", "aerie.dragon1", "Loot pile under the first Red Dragon."),
+    i("Dragon Tooth", "weapon", "aerie.dragon1", "Inside the egg nest on the first dragon's platform."),
+    i("Petrified Dragon Bone", "dragon-bone", "aerie.right_path", "Past the Dark Priestess up the hillside path to the right."),
+    i("Magic Stone", "titanite", "aerie.dragon2", "Corpse in the second dragon's open area."),
+    i("Soul of a Great Hero", "soul", "aerie.dragon2", "Corpse in the second dragon's open area."),
+    i("Large Soul of a Brave Warrior", "soul", "aerie.dragon2", "Corpse in the second dragon's open area."),
+    i("Soul of a Great Hero", "soul", "aerie.dragon3", "Corpses in the third dragon's area."),
+    i("Ring of the Evil Eye +1", "ring", "aerie.dragon3", "Corpse in the third dragon's area."),
+    i("Firedrake Stone", "consumable", "aerie.dragon3", "Corpse in the third dragon's area."),
+    i("Twinkling Titanite", "twinkling", "aerie.dragon3", "Corpse in the third dragon's area."),
+    i("Petrified Dragon Bone", "dragon-bone", "aerie.dragon3", "Corpse in the third dragon's area."),
+    i("Dragon Charm", "consumable", "aerie.dragon3", "Corpse in the third dragon's area."),
+    i("Twinkling Titanite", "twinkling", "aerie.dragon3", "Crystal Lizards throughout the Aerie (11 in SotFS) drop roughly 6-10 Twinkling Titanite in total.", { qty: 6, note: "Crystal Lizard drops; count is approximate per Fextralife." }),
+    i("Petrified Dragon Bone", "dragon-bone", "aerie.dragon3", "Crystal Lizards throughout the Aerie drop roughly 6-10 Petrified Dragon Bone in total.", { qty: 6, note: "Crystal Lizard drops; count is approximate per Fextralife." }),
+    i("Petrified Something", "unique", "aerie.cave", "Listed by Fextralife for the Aerie (x2), on corpses among the dragon areas.", { qty: 2, note: "Exact spot not given by the wiki." }),
+    i("Pharros' Lockstone", "lockstone", "aerie.dragon2", "Listed by Fextralife for the Aerie.", { note: "Exact spot not given by the wiki." }),
+    i("Large Soul of a Brave Warrior", "soul", "aerie.dragon3", "Second Large Soul of a Brave Warrior listed by Fextralife for the Aerie.", { note: "Exact spot not given by the wiki." }),
+  ],
+  npcs: [
+    { id: "npc.emerald_aerie", name: "Emerald Herald (Aerie)", areaId: A, node: "aerie.entrance", role: "npc", description: "On the cliff right of the elevator exit; gives the Aged Feather.", source: SRC },
+    { id: "npc.sharron_aerie", name: "Fencer Sharron (invader)", areaId: A, node: "aerie.right_path", role: "npc", description: "SotFS: invades when crossing the wooden egg bridge on the optional route.", source: SRC },
+    { id: "npc.navlaan_aerie", name: "Royal Sorcerer Navlaan (invader)", areaId: A, node: "aerie.dragon2", role: "npc", description: "Can invade here if freed from Aldia's Keep.", source: SRC },
+  ],
+  features: [
+    { id: "ft.aerie.zipline", name: "Zip-line skip", kind: "shortcut", areaId: A, node: "aerie.bonfire", description: "Ladder beside the bonfire to a zip-line that carries you over the whole Aerie to the Dragon Shrine bridge.", source: SRC },
+    { id: "ft.aerie.statue", name: "Petrified hollow (first bridge)", kind: "locked-door", areaId: A, node: "aerie.cave", requires: "Fragrant Branch of Yore (or bypass via the bonfire ladder)", description: "SotFS: blocks the far end of the winding-path bridge to the cave.", source: SRC },
+    { id: "ft.aerie.eggs", name: "Dragon eggs (bridge timer)", kind: "lever", areaId: A, node: "aerie.bridge", description: "3 eggs: dragons buffed. 7: timed bridge crossing. 10: bridge destroyed until you rest.", source: SRC },
+  ],
+  edges: [
+    edge("aerie.entrance", "aerie.bonfire", 1, "Left path over the bridge."),
+    edge("aerie.bonfire", "aerie.bridge", 2, "Ladder up and ride the zip-line over the Aerie.", { kind: "shortcut", oneWay: true }),
+    edge("aerie.bonfire", "aerie.cave", 1, "Winding path up to the bridge with the petrified statue, into the cave.", { requires: [req.branch("Petrified hollow at the end of the bridge (SotFS); the ladder by the bonfire bypasses it")] }),
+    edge("aerie.cave", "aerie.dragon1", 1, "Left path from the Crystal Lizard recess."),
+    edge("aerie.cave", "aerie.right_path", 1, "Right path: bridge, egg fork, tunnel, walkway."),
+    edge("aerie.dragon1", "aerie.right_path", 1, "Bridge on the far left of the first nest loops round to the right-hand path."),
+    edge("aerie.right_path", "aerie.dragon2", 1, "Up the hillside past the Dark Priestess; left walkway into the second nest."),
+    edge("aerie.dragon2", "aerie.dragon3", 1, "Right path past more Rupturing Hollows to the ledge above the third dragon."),
+    edge("aerie.dragon3", "aerie.bridge", 1, "Bridge on the right past two Rupturing Hollows to the Dragon Shrine bridge."),
+    edge("aerie.bridge", "dshrine.entrance", 1, "Cross the long bridge (mind the eggs you broke)."),
+  ],
+}, SRC);
