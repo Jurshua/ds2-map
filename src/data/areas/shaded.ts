@@ -125,7 +125,7 @@ export default finalize([3600, 2100], {
     edge("shaded.fork_road", "shaded.falconer_path", 1, "Left door: Falconers, bridge arch, castle wall."),
     edge("shaded.falconer_path", "winter.entrance", 2, "Path left of the collapsed archway; the Shrine of Winter door.", { requires: [req.event("Four Great Souls / Primal Bonfires, or 1,000,000 Soul Memory (NG)")] }),
     edge("shaded.fork_road", "shaded.kings_door", 1, "Straight door: hounds, Ogre, water with the Red Tearstone Ring."),
-    edge("shaded.kings_door", "aldias.entrance", 1, "King's Door opened with the King's Ring.", { requires: [req.ring("King's Ring", "From Vendrick's chamber in the Undead Crypt")] }),
+    edge("shaded.kings_door", "aldias.entrance", 1, "King's Door opened with the King's Ring.", { requires: [req.ring("King's Ring", "Vendrick's chamber in the Undead Crypt, after Velstadt")] }),
     edge("shaded.fork_road", "shaded.mist", 1, "Right door into the ghost mist."),
     edge("shaded.mist", "shaded.ruins", 2, "Hug the right wall, then the cliff left to the stairway up to the ruins."),
     edge("shaded.ruins", "shaded.tark", 1, "Over the bridge, up the hill to the curse-urn plaza."),

@@ -105,7 +105,7 @@ export default finalize([5650, 450], {
     edge("eleum.fountain", "eleum.abandoned", 1, "Crate room, far door, building on the right, drop down.", { kind: "drop" }),
     edge("eleum.fountain", "eleum.garrison_key", 1, "Frozen path between the buildings to the sconce door.", { requires: [req.event("Four sconces lit (after Aava)")] }),
     edge("eleum.abandoned", "eleum.golem_yard", 1, "Outside past the Crystal Golems, ramp and stairs, path between the buildings."),
-    edge("eleum.golem_yard", "eleum.expulsion", 1, "Through the lever gate, left past the Golem and hollows, Garrison Ward Key door.", { requires: [req.key("Garrison Ward Key", "Flexile Sentry auditorium behind the sconce door")] }),
+    edge("eleum.golem_yard", "eleum.expulsion", 1, "Through the lever gate, left past the Golem and hollows, Garrison Ward Key door.", { requires: [req.key("Garrison Ward Key", "Flexile Sentry auditorium behind the sconce door; the sconces can only be lit after Aava, the King's Pet is dead")] }),
     edge("eleum.expulsion", "frigid.coffin", 1, "Examine the coffin behind the bonfire.", { kind: "warp", oneWay: true }),
     edge("eleum.golem_yard", "eleum.priestess_altar", 1, "Through the gate, right up the spiral stairs, lever building, Lancer, stairs down to the altar."),
     edge("eleum.priestess_altar", "eleum.inner_wall", 1, "Right out of the altar, path down-left past the warpick enemy to the fog door."),

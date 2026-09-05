@@ -60,8 +60,8 @@ export default finalize([3600, 400], {
     i("Corrosive Urn", "consumable", "dc.acid_yard", "Chest at the far end of the acid yard.", { qty: 3 }),
     i("Large Soul of a Brave Warrior", "soul", "dc.acid_yard", "Chest in the poison-mask room up the outside passage (with Twinkling Titanite); masks fire when opened."),
     i("Twinkling Titanite", "twinkling", "dc.acid_yard", "Chest in the poison-mask room."),
-    i("Fire Greatarrow", "ammo", "dc.acid_yard", "Nashandra-painting room guarded by three Syan statues.", { qty: 10 }),
-    i("Destructive Greatarrow", "ammo", "dc.acid_yard", "Nashandra-painting room.", { qty: 10 }),
+    i("Fire Greatarrow", "ammo", "dc.acid_yard", "Nashandra-painting room guarded by three Syan statues.", { qty: 10, note: "Fextralife walkthrough: 10x in NG; wikidot lists 20x Fire Greatarrow only at Bonfire Intensity 2+." }),
+    i("Destructive Greatarrow", "ammo", "dc.acid_yard", "Nashandra-painting room (Bonfire Intensity 2+ / NG+ only per wikidot, x20).", { qty: 20, ngPlusOnly: true, note: "Fextralife's item list does not include it; wikidot: 20x at Bonfire Intensity 2+.", source: "http://darksouls2.wikidot.com/drangleic-castle" }),
     i("Torch", "consumable", "dc.acid_yard", "Nashandra-painting room.", { qty: 3 }),
     i("Petrified Dragon Bone", "dragon-bone", "dc.acid_yard", "Nashandra-painting room."),
     i("Soul of a Brave Warrior", "soul", "dc.forgotten_chamber", "Corpse at the bottom of the ladder guarded by a living Royal Swordsman."),
@@ -125,6 +125,6 @@ export default finalize([3600, 400], {
     edge("dc.elevator_room", "dc.embedded", 1, "Elevator up once the golem is activated.", { kind: "elevator", requires: [req.event("Elevator golem activated by a Manikin's soul")] }),
     edge("dc.elevator_room", "dc.kings_passage", 1, "Unlock the King's Passage doors and climb to the arena.", { requires: [req.key("Key to King's Passage", "Chest in the Embedded's room")] }),
     edge("dc.kings_passage", "amana.tower_of_prayer", 1, "Elevator down beyond the Looking Glass Knight's arena.", { kind: "elevator", requires: [req.boss("Looking Glass Knight")] }),
-    edge("dc.kings_gate", "throne.entrance", 2, "Left of the bonfire: King's Ring door and the elevator down.", { kind: "elevator", requires: [req.ring("King's Ring")] }),
+    edge("dc.kings_gate", "throne.entrance", 2, "Left of the bonfire: King's Ring door and the elevator down.", { kind: "elevator", requires: [req.ring("King's Ring", "Vendrick's chamber in the Undead Crypt, after Velstadt")] }),
   ],
 }, SRC);

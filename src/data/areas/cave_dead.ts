@@ -29,7 +29,7 @@ export default finalize([1450, 4800], {
   items: [
     i("Petrified Something", "unique", "cave_dead.statue_room", "Metal chest in the room full of petrifying statues.", { qty: 3 }),
     i("Brightbug", "consumable", "cave_dead.statue_room", "Corpse in the room full of petrifying statues.", { qty: 2 }),
-    i("Bonfire Ascetic", "ascetic", "cave_dead.statue_room", "Corpse in the room full of petrifying statues.", { qty: 3 }),
+    i("Bonfire Ascetic", "ascetic", "cave_dead.statue_room", "Corpse in the room full of petrifying statues.", { qty: 3, note: "Fextralife's item list says 5x, but its walkthrough, the Bonfire Ascetic page and wikidot all say 3x." }),
     i("Alluring Skull", "consumable", "cave_dead.trio", "Next to a petrifying statue trap before the boss fog (wikidot).", { qty: 3, source: WSRC }),
     i("Twinkling Titanite", "twinkling", "cave_dead.trio", "Dropped by the three bosses.", { qty: 3, prerequisites: ["Graverobber, Varg and Cerah defeated"] }),
     i("Petrified Dragon Bone", "dragon-bone", "cave_dead.trio", "Dropped by the three bosses.", { qty: 3, prerequisites: ["Graverobber, Varg and Cerah defeated"] }),

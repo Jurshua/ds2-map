@@ -69,7 +69,7 @@ export default finalize([1400, 400], {
     i("Large Soul of a Proud Knight", "soul", "crypt.pharros_room", "11 o'clock doorway (with Dragon Charm)."),
     i("Dragon Charm", "consumable", "crypt.pharros_room", "11 o'clock doorway."),
     i("Magic Stone", "titanite", "crypt.pharros_room", "4 o'clock doorway: past the lever bridge, chest (with Darknight Stone)."),
-    i("Darknight Stone", "titanite", "crypt.pharros_room", "Chest past the lever bridge."),
+    i("Darknight Stone", "titanite", "crypt.pharros_room", "Chest past the lever bridge.", { qty: 2, note: "Fextralife lists Darknight Stone x2 + x1 for the crypt." }),
     i("Mace of the Insolent", "weapon", "crypt.pharros_room", "Corpse near the exit of the clock room (with Soul of a Hero)."),
     i("Soul of a Hero", "soul", "crypt.pharros_room", "Corpse near the clock room exit."),
     i("Radiant Lifegem", "lifegem", "crypt.pharros_room", "Corpse around 5 o'clock (with Homeward Bone)."),

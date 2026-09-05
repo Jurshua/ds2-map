@@ -9,7 +9,7 @@ for (const b of bundles) {
   lines.push(`| ${b.area.name} | ${b.area.dlc ?? ""} | ${b.bonfires.length} | ${b.bosses.length} | ${b.items.length} | ${b.npcs.length} | ${b.features.length} | ${b.nodes.length} | ${b.edges.length} | ${status} | ${b.area.source} |`);
 }
 lines.push("", "## Notes", "",
-  "- Bonfires: 77 regular + 4 Primal Bonfires = 81 (Fextralife's Bonfires page lists 77 named bonfires; Primal Bonfires are added as their own records). Belfry Sol Approach is filed under Belfry Sol, Sanctum Interior under Dragon's Rest, as on Fextralife's Bonfires page.",
+  "- Bonfires: 77 regular + 4 Primal Bonfires = 81 (Fextralife's Bonfires page lists 77 named bonfires; Primal Bonfires are added as their own records). Belfry Sol Approach is filed under Belfry Sol and Sanctum Interior under Dragon's Sanctum, as on Fextralife's Bonfires page (the Sanctum Interior record lives in drest.ts because it sits on the descent to Dragon's Rest).",
   "- Bosses: 41 (32 base-game + 9 DLC, per Fextralife's Bosses page). The Pursuer's repeat encounters (Iron Keep, Things Betwixt, Drangleic Castle, Lost Bastille) are recorded as features/notes, not extra bosses.",
   "- Items marked with a `note` saying 'Exact spot not given by the wiki' come from the page's item list but the walkthrough does not describe the location; the `howToReach` text gives the closest landmark.",
   "- Throne of Want, Old Chaos and Dark Chasm of Old have no ground pickups on the wiki (only boss drops / covenant rewards, which are recorded).",

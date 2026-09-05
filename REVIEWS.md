@@ -47,3 +47,8 @@ Findings (all fixed before round 4):
 8. Shulva Dragon Charm duplicate/placement. → Single entry, wikidot placement.
 9. "Elana, Squalid Queen" naming. → Matched to Fextralife.
 
+## Round 4 — VERDICT: PASS
+
+Scores: Accuracy 9 · Coverage 9 · Routing 9 · Usability 8 · Visual 8 · Performance 9. Zero console errors after reload; build and lint clean. Verified: 41/41 bosses (names, areas, required flags), 81/81 bonfires, 39/42 sampled items exact (3 quantity/NG+ nits), 10/10 drop claims, 5/5 coverage areas complete, 9 routes game-accurate, all 361 nodes reachable from The Far Fire.
+
+Minor findings, fixed after the pass: Destructive Greatarrow marked NG+ only (wikidot); wiki-disagreement notes on Cave of the Dead Ascetics and Undead Crypt Darknight Stones; key prerequisites now state their own gating (Garrison Ward Key after Aava, King's Ring after Velstadt, Ashen Mist Heart after the Guardian Dragon); farmable-item select uses unique option values; COVERAGE.md note corrected.

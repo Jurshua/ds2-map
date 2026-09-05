@@ -262,7 +262,7 @@ export type Destination =
   | { type: "nearest-boss" }
   | { type: "nearest-merchant" }
   | { type: "boss"; id: string }
-  | { type: "farm"; enemyId: string }
+  | { type: "farm"; enemyId: string; label?: string }
   | { type: "marker"; id: string };
 
 export function RoutePanel({ start, dest, opts, result, onSetDest, onSetOpts, onClear, onSelect, onFly }: {
@@ -302,9 +302,9 @@ export function RoutePanel({ start, dest, opts, result, onSetDest, onSetOpts, on
           </select>
         </label>
         <label className="block text-xs text-stone-300">Farmable item (best spot)
-          <select className="sel" value={dest?.type === "farm" ? dest.enemyId : ""} onChange={(e) => e.target.value && onSetDest({ type: "farm", enemyId: e.target.value })}>
+          <select className="sel" value={dest?.type === "farm" ? String(farmOptions.findIndex((o) => o.enemyId === dest.enemyId && o.label === dest.label)) : ""} onChange={(e) => e.target.value !== "" && onSetDest({ type: "farm", enemyId: farmOptions[Number(e.target.value)].enemyId, label: farmOptions[Number(e.target.value)].label })}>
             <option value="">—</option>
-            {farmOptions.map((o, i) => <option key={i} value={o.enemyId}>{o.label}</option>)}
+            {farmOptions.map((o, i) => <option key={i} value={i}>{o.label}</option>)}
           </select>
         </label>
         <p className="text-xs text-stone-400">Or open any marker and press “Route to here”.</p>
