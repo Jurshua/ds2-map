@@ -5,7 +5,7 @@ const SRC = FEX + "Grave+of+Saints";
 const WDS = "http://darksouls2.wikidot.com/scholar-of-the-first-sin";
 const i = (name: string, cat: Parameters<typeof it>[2], n: string, how: string, extra?: Parameters<typeof it>[5]) => it(A, name, cat, n, how, extra);
 
-export default finalize([3300, 3200], {
+export default finalize([3600, 3900], {
   area: {
     id: A,
     name: "Grave of Saints",

@@ -8,7 +8,7 @@ const J = "mem_jeigh";
 const JSRC = FEX + "Memory+of+Jeigh";
 const ij = (name: string, cat: Parameters<typeof it>[2], n: string, how: string, extra?: Parameters<typeof it>[5]) => it(J, name, cat, n, how, extra);
 
-export const memJeigh: AreaBundle = finalize([1350, 3350], {
+export const memJeigh: AreaBundle = finalize([1200, 3650], {
   area: {
     id: J,
     name: "Memory of Jeigh",
@@ -54,7 +54,7 @@ const O = "mem_orro";
 const OSRC = FEX + "Memory+of+Orro";
 const io = (name: string, cat: Parameters<typeof it>[2], n: string, how: string, extra?: Parameters<typeof it>[5]) => it(O, name, cat, n, how, extra);
 
-export const memOrro: AreaBundle = finalize([1750, 3600], {
+export const memOrro: AreaBundle = finalize([1750, 4050], {
   area: {
     id: O,
     name: "Memory of Orro",
@@ -106,7 +106,7 @@ const V = "mem_vammar";
 const VSRC = FEX + "Memory+of+Vammar";
 const iv = (name: string, cat: Parameters<typeof it>[2], n: string, how: string, extra?: Parameters<typeof it>[5]) => it(V, name, cat, n, how, extra);
 
-export const memVammar: AreaBundle = finalize([1350, 3750], {
+export const memVammar: AreaBundle = finalize([1050, 4150], {
   area: {
     id: V,
     name: "Memory of Vammar",

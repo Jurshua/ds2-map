@@ -5,7 +5,7 @@ const SRC = FEX + "Brightstone+Cove+Tseldora";
 const WDS = "http://darksouls2.wikidot.com/scholar-of-the-first-sin";
 const i = (name: string, cat: Parameters<typeof it>[2], n: string, how: string, extra?: Parameters<typeof it>[5]) => it(A, name, cat, n, how, extra);
 
-export default finalize([2200, 850], {
+export default finalize([1300, 1250], {
   area: {
     id: A,
     name: "Brightstone Cove Tseldora",

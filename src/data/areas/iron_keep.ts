@@ -4,7 +4,7 @@ const A = "iron_keep";
 const SRC = FEX + "Iron+Keep";
 const i = (name: string, cat: Parameters<typeof it>[2], n: string, how: string, extra?: Parameters<typeof it>[5]) => it(A, name, cat, n, how, extra);
 
-export default finalize([6150, 3500], {
+export default finalize([7050, 3950], {
   area: {
     id: A,
     name: "Iron Keep",
@@ -39,7 +39,6 @@ export default finalize([6150, 3500], {
   ],
   bosses: [
     { id: "boss.smelter_demon", name: "Smelter Demon", areaId: A, node: "ik.smelter", required: false, description: "Iron demon that ignites its own body and sword; fire damage on contact. Lucatiel can be summoned before the fog.", drops: ["Smelter Demon Soul"], note: "Optional per Fextralife: the keep beyond can be reached by warping to the Belfry Sol Approach bonfire (or via Belfry Sol) instead of clearing the arena. Drops nothing unique besides his soul; Smelter Demon Set becomes purchasable from Maughlin.", source: FEX + "Smelter+Demon" },
-    { id: "boss.pursuer_iron_keep", name: "The Pursuer (Iron Keep)", areaId: A, node: "ik.smelter", required: false, description: "Re-appears in the Smelter Demon's arena after the demon dies (warp away and back). Drops the Ring of Blades +1.", drops: ["Ring of Blades +1"], note: "Repeat encounter of the Forest boss; not counted as a separate boss.", source: SRC },
     { id: "boss.old_iron_king", name: "Old Iron King", areaId: A, node: "ik.old_iron_king", required: false, description: "Great One rising from the lava; fought on a small stone platform. Fire breath and sweeping fists.", drops: ["Old Iron King Soul"], note: "One of the four Old Ones needed for the Shrine of Winter (or 1,000,000 soul memory).", source: FEX + "Old+Iron+King" },
   ],
   items: [
@@ -100,6 +99,7 @@ export default finalize([6150, 3500], {
     { id: "npc.oliver", name: "Oliver the Collector (invader)", areaId: A, node: "ik.scenic", role: "npc", description: "Invades when you open the Destructive Greatarrow chest.", source: SRC },
   ],
   features: [
+    { id: "ft.ik.pursuer", name: "The Pursuer (repeat encounter)", kind: "lever", areaId: A, node: "ik.smelter", requires: "Smelter Demon defeated", description: "The Pursuer re-appears in the Smelter Demon's arena after the demon dies (warp away and back); drops the Ring of Blades +1.", source: SRC },
     { id: "ft.ik.dragon_remnants", name: "Dragon Remnants dueling bridge", kind: "covenant", areaId: A, node: "ik.bridge", description: "Popular arena for Dragon Remnants covenant duels. Join via Magerold with a Petrified Egg (Dragon Aerie).", source: SRC },
     { id: "ft.ik.ballista_walls", name: "Illusory walls (ballista)", kind: "illusory-wall", areaId: A, node: "ik.furnace", description: "Alcove right of the stairs, then the wall the ballista faces.", source: SRC },
     { id: "ft.ik.pharros_roof", name: "Pharros' water contraption (Zweihander roof)", kind: "pharros", areaId: A, node: "ik.furnace", requires: "Pharros' Lockstone", description: "Spills healing water; dousing yourself adds fire defence for the lava paths.", source: SRC },

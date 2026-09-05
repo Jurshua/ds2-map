@@ -4,7 +4,7 @@ const A = "purgatory";
 const SRC = FEX + "Undead+Purgatory";
 const i = (name: string, cat: Parameters<typeof it>[2], n: string, how: string, extra?: Parameters<typeof it>[5]) => it(A, name, cat, n, how, extra);
 
-export default finalize([4900, 2950], {
+export default finalize([5350, 3350], {
   area: {
     id: A,
     name: "Undead Purgatory",

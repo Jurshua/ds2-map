@@ -4,7 +4,7 @@ const A = "things_betwixt";
 const SRC = FEX + "Things+Betwixt";
 const i = (name: string, cat: Parameters<typeof it>[2], n: string, how: string, extra?: Parameters<typeof it>[5]) => it(A, name, cat, n, how, extra);
 
-export default finalize([2350, 1450], {
+export default finalize([2500, 2300], {
   area: {
     id: A,
     name: "Things Betwixt",

@@ -4,7 +4,7 @@ const A = "bastille";
 const SRC = FEX + "The+Lost+Bastille";
 const i = (name: string, cat: Parameters<typeof it>[2], n: string, how: string, extra?: Parameters<typeof it>[5]) => it(A, name, cat, n, how, extra);
 
-export default finalize([1500, 1900], {
+export default finalize([1400, 2100], {
   area: {
     id: A,
     name: "The Lost Bastille",

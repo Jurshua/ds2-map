@@ -6,7 +6,7 @@ const G = "grand_cath";
 const GSRC = FEX + "Grand+Cathedral";
 const ig = (name: string, cat: Parameters<typeof it>[2], n: string, how: string, extra?: Parameters<typeof it>[5]) => it(G, name, cat, n, how, extra);
 
-export const grandCathedral: AreaBundle = finalize([5250, 250], {
+export const grandCathedral: AreaBundle = finalize([6550, 400], {
   area: {
     id: G,
     name: "Grand Cathedral",
@@ -55,7 +55,7 @@ const O = "old_chaos";
 const OSRC = FEX + "Old+Chaos";
 const io = (name: string, cat: Parameters<typeof it>[2], n: string, how: string, extra?: Parameters<typeof it>[5]) => it(O, name, cat, n, how, extra);
 
-export const oldChaos: AreaBundle = finalize([5350, 550], {
+export const oldChaos: AreaBundle = finalize([6600, 950], {
   area: {
     id: O,
     name: "Old Chaos",
@@ -93,7 +93,7 @@ const F = "frigid";
 const FSRC = FEX + "Frigid+Outskirts";
 const iF = (name: string, cat: Parameters<typeof it>[2], n: string, how: string, extra?: Parameters<typeof it>[5]) => it(F, name, cat, n, how, extra);
 
-export const frigidOutskirts: AreaBundle = finalize([5850, 300], {
+export const frigidOutskirts: AreaBundle = finalize([7400, 500], {
   area: {
     id: F,
     name: "Frigid Outskirts",

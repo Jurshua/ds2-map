@@ -4,7 +4,7 @@ const A = "sinners_rise";
 const SRC = FEX + "Sinners'+Rise";
 const i = (name: string, cat: Parameters<typeof it>[2], n: string, how: string, extra?: Parameters<typeof it>[5]) => it(A, name, cat, n, how, extra);
 
-export default finalize([950, 1500], {
+export default finalize([600, 1650], {
   area: {
     id: A,
     name: "Sinners' Rise",

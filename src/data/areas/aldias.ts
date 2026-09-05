@@ -5,7 +5,7 @@ const SRC = FEX + "Aldia's+Keep";
 const WDS = "http://darksouls2.wikidot.com/scholar-of-the-first-sin";
 const i = (name: string, cat: Parameters<typeof it>[2], n: string, how: string, extra?: Parameters<typeof it>[5]) => it(A, name, cat, n, how, extra);
 
-export default finalize([4300, 1150], {
+export default finalize([4800, 1300], {
   area: {
     id: A,
     name: "Aldia's Keep",

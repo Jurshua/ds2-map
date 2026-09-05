@@ -1,10 +1,10 @@
-import { finalize, it, node, edge, req, FEX } from "../helpers";
+import { finalize, it, node, edge, FEX } from "../helpers";
 
 const A = "mem_oik";
 const SRC = FEX + "Memory+of+the+Old+Iron+King";
 const i = (name: string, cat: Parameters<typeof it>[2], n: string, how: string, extra?: Parameters<typeof it>[5]) => it(A, name, cat, n, how, extra);
 
-export default finalize([6650, 4700], {
+export default finalize([7900, 5500], {
   area: {
     id: A,
     name: "Memory of the Old Iron King",

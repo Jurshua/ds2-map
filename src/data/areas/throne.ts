@@ -3,7 +3,7 @@ import { finalize, node, edge, req, FEX } from "../helpers";
 const A = "throne";
 const SRC = FEX + "Throne+of+Want";
 
-export default finalize([4150, 250], {
+export default finalize([4500, 350], {
   area: {
     id: A,
     name: "Throne of Want",

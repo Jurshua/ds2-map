@@ -6,7 +6,7 @@ const FSRC = FEX + "Shrine+of+Amana";
 const WDS = WD + "scholar-of-the-first-sin";
 const i = (name: string, cat: Parameters<typeof it>[2], n: string, how: string, extra?: Parameters<typeof it>[5]) => it(A, name, cat, n, how, extra);
 
-export default finalize([2700, 500], {
+export default finalize([2450, 400], {
   area: {
     id: A,
     name: "Shrine of Amana",

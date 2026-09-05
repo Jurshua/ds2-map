@@ -4,7 +4,7 @@ const A = "copse";
 const SRC = FEX + "Huntsman's+Copse";
 const i = (name: string, cat: Parameters<typeof it>[2], n: string, how: string, extra?: Parameters<typeof it>[5]) => it(A, name, cat, n, how, extra);
 
-export default finalize([4300, 3200], {
+export default finalize([4600, 3750], {
   area: {
     id: A,
     name: "Huntsman's Copse",

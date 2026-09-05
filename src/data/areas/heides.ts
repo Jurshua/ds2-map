@@ -4,7 +4,7 @@ const A = "heides";
 const SRC = FEX + "Heide's+Tower+of+Flame";
 const i = (name: string, cat: Parameters<typeof it>[2], n: string, how: string, extra?: Parameters<typeof it>[5]) => it(A, name, cat, n, how, extra);
 
-export default finalize([4550, 2200], {
+export default finalize([4700, 2600], {
   area: {
     id: A,
     name: "Heide's Tower of Flame",

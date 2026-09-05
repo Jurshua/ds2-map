@@ -4,7 +4,7 @@ const A = "earthen";
 const SRC = FEX + "Earthen+Peak";
 const i = (name: string, cat: Parameters<typeof it>[2], n: string, how: string, extra?: Parameters<typeof it>[5]) => it(A, name, cat, n, how, extra);
 
-export default finalize([5550, 3850], {
+export default finalize([6250, 4450], {
   area: {
     id: A,
     name: "Earthen Peak",

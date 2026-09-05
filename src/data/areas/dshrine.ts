@@ -1,11 +1,11 @@
-import { finalize, it, node, edge, req, FEX } from "../helpers";
+import { finalize, it, node, edge, FEX } from "../helpers";
 
 const A = "dshrine";
 const SRC = FEX + "Dragon+Shrine";
 const WDS = "http://darksouls2.wikidot.com/scholar-of-the-first-sin";
 const i = (name: string, cat: Parameters<typeof it>[2], n: string, how: string, extra?: Parameters<typeof it>[5]) => it(A, name, cat, n, how, extra);
 
-export default finalize([5800, 650], {
+export default finalize([7000, 1300], {
   area: {
     id: A,
     name: "Dragon Shrine",

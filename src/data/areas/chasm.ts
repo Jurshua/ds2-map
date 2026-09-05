@@ -4,7 +4,7 @@ const A = "chasm";
 const SRC = FEX + "Dark+Chasm+of+Old";
 const i = (name: string, cat: Parameters<typeof it>[2], n: string, how: string, extra?: Parameters<typeof it>[5]) => it(A, name, cat, n, how, extra);
 
-export default finalize([4000, 4300], {
+export default finalize([4550, 5250], {
   area: {
     id: A,
     name: "Dark Chasm of Old",
