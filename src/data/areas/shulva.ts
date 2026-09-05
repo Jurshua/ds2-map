@@ -34,7 +34,7 @@ export default finalize([2600, 5350], {
   ],
   bosses: [],
   items: [
-    i("Dragon Charm", "consumable", "shulva.entrance", "Body on the left just inside the doorway.", { qty: 3 }),
+    i("Dragon Charm", "consumable", "shulva.entrance", "Body on the left just inside the doorway of the tunnel before the first bonfire.", { qty: 3, source: "http://darksouls2.wikidot.com/shulva-sanctum-city" }),
     i("Old Growth Balm", "consumable", "shulva.sanctum_walk", "Stairs down left of the bonfire; body at the bottom.", { qty: 3 }),
     i("Lifegem", "lifegem", "shulva.obelisks", "Body by the three Sanctum Archers on the left.", { qty: 5 }),
     i("Dark Quartz Ring +3", "ring", "shulva.obelisks", "Raise the structure by the archers with the obelisk, jump on, body on the pillar to the right."),
@@ -58,7 +58,6 @@ export default finalize([2600, 5350], {
     i("Sanctum Mace", "weapon", "shulva.lower_city", "Ledge right of the building below the Tower of Prayer, all the way to the right."),
     i("Rusted Coin", "consumable", "shulva.lower_city", "Body in the elevator building before Sinh's bridge (10 in NG+).", { qty: 5 }),
     i("Focus Souls", "spell", "shulva.lower_city", "Break the vases across Sinh's bridge and go around to the body."),
-    i("Dragon Charm", "consumable", "shulva.obelisks", "Fextralife lists 3x Dragon Charm; second set on the plaza.", { note: "Count from the wiki list." }),
   ],
   npcs: [
     { id: "npc.baldyr", name: "Rockshield Baldyr (invader)", areaId: A, node: "shulva.priestess_chamber", role: "npc", description: "Invades on the long bridge to the Priestess' Chamber.", source: FEX + "Dragon's+Sanctum" },
@@ -77,7 +76,7 @@ export default finalize([2600, 5350], {
     edge("shulva.winding_cliff", "shulva.pagan_tree", 1, "Cave across the chasm behind the red-eyed statues (hit the obelisk).", { requires: [req.event("Obelisk behind the statues struck")] }),
     edge("shulva.tower_of_prayer", "shulva.lower_city", 1, "Other door, drop down left, through the building and down to the right."),
     edge("shulva.lower_city", "sanctum.entrance", 1, "Cross Sinh's bridge into the Sanctum building."),
-    edge("shulva.lower_city", "shulva.sanctum_walk", 1, "Elevator in the Rusted Coin building (once activated from the Sanctum side).", { kind: "elevator", requires: [req.event("Obelisk in the Dragon's Rest elevator building struck")] }),
+    edge("shulva.lower_city", "shulva.sanctum_walk", 1, "Elevator in the Rusted Coin building rides up to the first bonfire once activated from the Sanctum side (one-way up).", { kind: "elevator", oneWay: true, requires: [req.event("Obelisk in the Dragon's Rest elevator building struck")] }),
     edge("shulva.priestess_chamber", "shulva.lower_city", 1, "Elevator from the Priestess' Chamber down to Sinh's bridge building.", { kind: "elevator" }),
     edge("shulva.priestess_chamber", "cave_dead.entrance", 1, "Cave and fog gate beyond the bonfire."),
   ],

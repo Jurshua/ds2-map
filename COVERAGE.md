@@ -15,7 +15,7 @@ Totals: 45 areas · 81 bonfires · 41 bosses · 1248 items · 158 NPC records ·
 | The Lost Bastille |  | 5 | 1 | 66 | 5 | 10 | 12 | 18 | ✔ wiki pickups entered | https://darksouls2.wiki.fextralife.com/The+Lost+Bastille |
 | Belfry Luna |  | 1 | 1 | 13 | 3 | 2 | 5 | 4 | ✔ wiki pickups entered | https://darksouls2.wiki.fextralife.com/Belfry+Luna |
 | Sinners' Rise |  | 2 | 1 | 16 | 2 | 3 | 6 | 6 | ✔ wiki pickups entered | https://darksouls2.wiki.fextralife.com/Sinners'+Rise |
-| Huntsman's Copse |  | 3 | 1 | 47 | 5 | 5 | 12 | 15 | ✔ wiki pickups entered | https://darksouls2.wiki.fextralife.com/Huntsman's+Copse |
+| Huntsman's Copse |  | 3 | 1 | 48 | 5 | 5 | 12 | 15 | ✔ wiki pickups entered | https://darksouls2.wiki.fextralife.com/Huntsman's+Copse |
 | Undead Purgatory |  | 1 | 1 | 4 | 1 | 2 | 3 | 2 | ✔ wiki pickups entered | https://darksouls2.wiki.fextralife.com/Undead+Purgatory |
 | Harvest Valley |  | 2 | 0 | 44 | 2 | 3 | 11 | 12 | ✔ wiki pickups entered | https://darksouls2.wiki.fextralife.com/Harvest+Valley |
 | Earthen Peak |  | 3 | 2 | 40 | 5 | 7 | 13 | 13 | ✔ wiki pickups entered | https://darksouls2.wiki.fextralife.com/Earthen+Peak |
@@ -41,7 +41,7 @@ Totals: 45 areas · 81 bonfires · 41 bosses · 1248 items · 158 NPC records ·
 | Memory of the Old Iron King | iron | 0 | 1 | 8 | 2 | 0 | 4 | 3 | ✔ wiki pickups entered | https://darksouls2.wiki.fextralife.com/Memory+of+the+Old+Iron+King |
 | Throne of Want |  | 0 | 3 | 0 | 4 | 1 | 4 | 3 | ✔ wiki pickups entered | https://darksouls2.wiki.fextralife.com/Throne+of+Want |
 | Dark Chasm of Old |  | 0 | 1 | 2 | 0 | 2 | 4 | 4 | ✔ wiki pickups entered | https://darksouls2.wiki.fextralife.com/Dark+Chasm+of+Old |
-| Shulva, Sanctum City | sunken | 3 | 0 | 25 | 1 | 3 | 9 | 11 | ✔ wiki pickups entered | https://darksouls2.wiki.fextralife.com/Shulva+-+Sanctum+City |
+| Shulva, Sanctum City | sunken | 3 | 0 | 24 | 1 | 3 | 9 | 11 | ✔ wiki pickups entered | https://darksouls2.wiki.fextralife.com/Shulva+-+Sanctum+City |
 | Dragon's Sanctum | sunken | 2 | 0 | 49 | 1 | 5 | 12 | 14 | ✔ wiki pickups entered | https://darksouls2.wiki.fextralife.com/Dragon's+Sanctum |
 | Dragon's Rest | sunken | 2 | 2 | 17 | 4 | 2 | 7 | 6 | ✔ wiki pickups entered | https://darksouls2.wiki.fextralife.com/Dragon's+Rest |
 | Cave of the Dead | sunken | 0 | 1 | 10 | 2 | 1 | 3 | 3 | ✔ wiki pickups entered | https://darksouls2.wiki.fextralife.com/Cave+of+the+Dead |

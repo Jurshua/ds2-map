@@ -84,6 +84,7 @@ export default finalize([4600, 3750], {
     i("Prisoner's Set", "armor", "copse.bridges", "Dropped by Hollow Prisoners in the Copse.", { note: "Enemy drop listed on the area page." }),
     i("Black Hollow Mage Set", "armor", "copse.necro_cave", "Dropped by the Necromancers (Hollow Mages) in the Copse caves.", { note: "Enemy drop listed on the area page." }),
     i("Poison Throwing Knife", "ammo", "copse.moth_cave", "Fextralife lists 10x Poison Throwing Knife for the Copse (dark building area).", { qty: 10, note: "Exact spot not given by the wiki." }),
+    i("Soul of a Nameless Soldier", "soul", "copse.bridges", "Listed by Fextralife for the Copse; corpse along the bridges path.", { note: "Exact spot not given by the wiki." }),
     i("Titanite Shard", "titanite", "copse.bridges", "Fextralife lists 4 Titanite Shards for the Copse; the fourth is on the bridges path.", { note: "Count from the wiki item list." }),
   ],
   npcs: [

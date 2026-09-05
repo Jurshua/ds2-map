@@ -30,7 +30,7 @@ export default finalize([900, 6100], {
     { id: "drest.sanctum_nadir", name: "Sanctum Nadir", areaId: A, note: "Behind the dragon wall that opens after Elana.", source: SRC },
   ],
   bosses: [
-    { id: "boss.elana", name: "Elana, the Squalid Queen", areaId: A, node: "drest.elana", required: false, dlc: "sunken", description: "Dark sorceress who summons skeletons, pigs or Velstadt. Fast dark spells and a lunging scythe.", drops: ["Soul of Elana, Squalid Queen"], note: "Optional DLC boss; required to reach Sinh.", source: FEX + "Elana,+Squalid+Queen" },
+    { id: "boss.elana", name: "Elana, Squalid Queen", areaId: A, node: "drest.elana", required: false, dlc: "sunken", description: "Dark sorceress who summons skeletons, pigs or Velstadt. Fast dark spells and a lunging scythe.", drops: ["Soul of Elana, Squalid Queen"], note: "Optional DLC boss; required to reach Sinh.", source: FEX + "Elana,+Squalid+Queen" },
     { id: "boss.sinh", name: "Sinh, the Slumbering Dragon", areaId: A, node: "drest.sinh", required: false, dlc: "sunken", description: "Poison-breathing dragon in a vast arena; aerial dives and toxic fire. Drops the Crown of the Sunken King.", drops: ["Soul of Sinh, the Slumbering Dragon", "Crown of the Sunken King"], note: "Optional DLC boss.", source: FEX + "Sinh,+the+Slumbering+Dragon" },
   ],
   items: [
@@ -67,7 +67,7 @@ export default finalize([900, 6100], {
     edge("sanctum.interior", "drest.drakeblood_room", 1, "Stairs down past two Knights, left and left."),
     edge("sanctum.interior", "drest.descent", 1, "Right after the bonfire, broken bridge on the left, drops and a run-jump.", { kind: "drop", oneWay: true }),
     edge("drest.descent", "drest.elana", 1, "Dead end: drop right, keep dropping until the Dragon's Rest title.", { kind: "drop", oneWay: true }),
-    edge("drest.elana", "drest.sanctum_nadir", 1, "The dragon wall opens after Elana.", { requires: [req.boss("Elana, the Squalid Queen")] }),
+    edge("drest.elana", "drest.sanctum_nadir", 1, "The dragon wall opens after Elana.", { requires: [req.boss("Elana, Squalid Queen")] }),
     edge("drest.sanctum_nadir", "drest.sinh", 1, "Small fog gate past the bonfire."),
   ],
 }, SRC);

@@ -107,7 +107,7 @@ export default finalize([1650, 5550], {
     edge("sanctum.spike_floors", "sanctum.denial", 1, "Priestess bridge rotating stone; three arrow switches."),
     edge("sanctum.spike_floors", "sanctum.lair", 1, "Narrow steps left of the spike room, stairs, corridor, fog gate (Jester Thomas)."),
     edge("sanctum.lair", "sanctum.dragon_stone", 1, "Out of the water to the circular stone.", { requires: [req.key("Dragon Stone", "Chest in the second spike room")] }),
-    edge("sanctum.dragon_stone", "shulva.sanctum_walk", 1, "Obelisk elevator up twice; the first lands behind Shulva's first bonfire.", { kind: "elevator" }),
+    edge("sanctum.dragon_stone", "shulva.sanctum_walk", 1, "Strike the obelisk to activate the elevator and ride it up twice; the top lands behind Shulva's first bonfire (one-way until activated from this side).", { kind: "elevator", oneWay: true, requires: [req.event("Elevator obelisk struck (Dragon's Rest elevator building)")] }),
     edge("sanctum.dragon_stone", "drest.entrance", 1, "Exit and stairs up to Dragon's Rest."),
     edge("sanctum.entrance", "sanctum.key_door", 1, "Eternal Sanctum Key door on the left.", { requires: [req.key("Eternal Sanctum Key", "Three-Knight room in the Sanctum")] }),
     edge("sanctum.key_door", "shulva.priestess_chamber", 1, "Ladders, balcony, then the long bridge (Rockshield Baldyr).", { requires: [req.key("Eternal Sanctum Key")] }),

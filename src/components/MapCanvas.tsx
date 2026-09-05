@@ -448,8 +448,10 @@ export const MapCanvas = forwardRef<MapCanvasHandle, Props>(function MapCanvas(
         const dx = p.x - lastPt.x, dy = p.y - lastPt.y;
         const v = vp.current;
         v.x -= dx / v.zoom; v.y -= dy / v.zoom;
-        const dt = Math.max(1, now - lastPt.t) / 1000;
-        velocity.current = { x: dx / dt * 0.45, y: dy / dt * 0.45 };
+        const dt = Math.max(16, now - lastPt.t) / 1000;
+        const vx = dx / dt * 0.45, vy = dy / dt * 0.45;
+        const mag = Math.hypot(vx, vy), cap = 1400;
+        velocity.current = mag > cap ? { x: vx / mag * cap, y: vy / mag * cap } : { x: vx, y: vy };
         lastPt = { ...p, t: now };
         if (Math.hypot(p.x - downPt.x, p.y - downPt.y) > 4) moved = true;
         clamp(); requestRender();

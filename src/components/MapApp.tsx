@@ -139,7 +139,7 @@ export default function MapApp() {
           {counts.areas} areas · {counts.bonfires} bonfires · {counts.bosses} bosses · {counts.items} items · {counts.edges} edges. Data from darksouls2.wiki.fextralife.com and darksouls2.wikidot.com (SotFS placements). Original schematic layout; not a game map image.
         </footer>
       </aside>
-      <main className="relative order-1 min-h-0 flex-1 md:order-2">
+      <main className="relative order-1 min-h-0 min-w-0 flex-1 overflow-hidden md:order-2">
         <MapCanvas ref={mapRef} markers={visible} selected={selected} route={routeForMap} collected={collected} onSelect={(m) => select(m)} onSelectNode={onSelectNode} onSelectArea={(id) => { const ar = areaById.get(id); if (ar) mapRef.current?.flyTo(ar.label[0], ar.label[1] + 60, 1.0); }} />
         <div className="pointer-events-none absolute left-2 top-2 flex flex-col gap-1">
           <button className="btn pointer-events-auto" onClick={() => mapRef.current?.fitWorld()} title="Fit the whole map (F)">Fit map</button>

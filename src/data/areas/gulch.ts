@@ -84,7 +84,7 @@ export default finalize([3600, 5300], {
     edge("gulch.big_gully", "gulch.rotten", 1, "Through the gully to the fog gate."),
     edge("gulch.hidden_chamber", "gulch.rotten", 1, "Break the urn for the shortcut to the end of the gully.", { kind: "shortcut" }),
     edge("gulch.rotten", "gulch.primal", 1, "Small door and narrow tunnel to the Primal Bonfire.", { requires: [req.boss("The Rotten")] }),
-    edge("gulch.primal", "shulva.entrance", 1, "Obelisk beside the Primal Bonfire.", { kind: "warp", requires: [req.dlc("Crown of the Sunken King")] }),
+    edge("gulch.primal", "shulva.entrance", 1, "Obelisk beside the Primal Bonfire; needs the Dragon Talon.", { kind: "warp", requires: [req.dlc("Crown of the Sunken King"), req.key("Dragon Talon", "Forgotten Key room in Majula's pit (SotFS)")] }),
     edge("gulch.primal", "maj.far_fire", 1, "Primal Bonfire warps back to Majula.", { oneWay: true, kind: "warp" }),
   ],
 }, SRC);

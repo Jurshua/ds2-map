@@ -32,3 +32,18 @@ Findings (all fixed before round 3):
 8. Boss naming ("Twin Dragonrider", "Ruin Sentinel" as on Fextralife), pigs renamed "Enslaved Pig". → Fixed.
 13/14. Drag inertia too strong; keyboard taps moved little. → Inertia halved with faster decay; each key press now nudges 60 px immediately.
 
+## Round 3 — VERDICT: FAIL
+
+Scores: Accuracy 9 · Coverage 9 · Routing 7 · Usability 7 · Visual 8 · Performance 9. Console 0 errors; build and lint clean. All 41 bosses, 81 bonfires, 42/42 sampled items present (40/42 texts exact), 11/11 drop claims, 5 coverage areas (one missing pickup), 8/8 routes game-accurate except the two below.
+
+Findings (all fixed before round 4):
+1. Sinh/Elana routes bypassed the Dragon's Sanctum via the ungated Dragon's Rest elevator edge. → Both Shulva elevators are now one-way upward and gated on the obelisk event; the route now passes through the Sanctum with Dragon Stone + Elana gating.
+2. Dragon Talon never listed for Sunken King routes. → Added as a key requirement on the Rotten's Primal Bonfire obelisk edge.
+3. Map pane could not shrink after a viewport resize (horizontal overflow). → `min-w-0 overflow-hidden` on the map pane.
+4. Uncapped drag inertia. → Velocity capped (1400 px/s) and dt floored at 16 ms.
+5. Huntsman's Copse missing Soul of a Nameless Soldier x1. → Added.
+6. Frozen Reindeer missing Radiant Lifegem drop. → Added.
+7. Unsourced "rare" qualifier on the Iron Warrior slab. → Removed.
+8. Shulva Dragon Charm duplicate/placement. → Single entry, wikidot placement.
+9. "Elana, Squalid Queen" naming. → Matched to Fextralife.
+

@@ -83,9 +83,9 @@ export const enemies: Enemy[] = [
       { item: "Smelter Hammer" },
       { item: "Minotaur Helm" },
       { item: "Firedrake Stone" },
-      { item: "Titanite Slab", rate: "rare" },
+      { item: "Titanite Slab" },
     ],
-    farmingNote: "Headless lava giants. Three emerge from the ash field below the Foyer elevator (Tower Key field); two guard the Lowermost Floor bonfire; one more waits in the Iron Passage's last room (per the Iron Passage page). Barrel Carriers or flame jets kill them quickly. Rare Titanite Slab drop.",
+    farmingNote: "Headless lava giants. Three emerge from the ash field below the Foyer elevator (Tower Key field); two guard the Lowermost Floor bonfire; one more waits in the Iron Passage's last room (per the Iron Passage page). Barrel Carriers or flame jets kill them quickly. Can drop a Titanite Slab.",
     source: FEX + "Iron+Warrior",
   }),
   E({
@@ -281,6 +281,7 @@ export const enemies: Enemy[] = [
     id: "en.frozen_reindeer", name: "Frozen Reindeer", areaIds: ["frigid"], node: "frigid.ruins", despawns: true,
     drops: [
       { item: "Petrified Dragon Bone", rate: "~5%" },
+      { item: "Radiant Lifegem" },
       { item: "Bone Fist", rate: "rare" },
     ],
     farmingNote: "Spawn with every blizzard in the Frigid Outskirts (about 17 after the first ruin, 22 after the second, 30 before the bridge) and then stop for good.",
