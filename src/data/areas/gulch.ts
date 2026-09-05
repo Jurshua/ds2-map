@@ -33,7 +33,7 @@ export default finalize([3600, 5300], {
     { id: "gulch.primal", name: "Primal Bonfire (The Rotten)", areaId: A, primal: true, note: "Large room after the Rotten's tunnel; obelisk to the Crown of the Sunken King DLC.", source: SRC },
   ],
   bosses: [
-    { id: "boss.the_rotten", name: "The Rotten", areaId: A, node: "gulch.rotten", required: false, description: "A mass of fused corpses wielding a cleaver, fought in a fire-lit pit. Lucatiel and Bashful Ray can be summoned.", drops: ["Soul of the Rotten"], note: "One of the four Old Ones for the Shrine of Winter.", source: FEX + "The+Rotten" },
+    { id: "boss.the_rotten", name: "The Rotten", areaId: A, node: "gulch.rotten", required: true, description: "A mass of fused corpses wielding a cleaver, fought in a fire-lit pit. Lucatiel and Bashful Ray can be summoned.", drops: ["Soul of the Rotten"], note: "One of the four Old Ones for the Shrine of Winter. Fextralife counts it as required: only the 1,000,000 Soul Memory Shrine of Winter skip makes it optional.", source: FEX + "The+Rotten" },
   ],
   items: [
     i("Shotel", "weapon", "gulch.oil_field", "Chest in the small cave left of the first puddles, guarded by poison statues (with Great Magic Weapon)."),

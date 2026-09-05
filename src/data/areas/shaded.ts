@@ -35,7 +35,7 @@ export default finalize([3600, 2100], {
     { id: "shaded.ruins", name: "Shaded Ruins", areaId: A, note: "After the mist: up the stairs, behind the broken makeshift ramp on the second floor.", source: SRC },
   ],
   bosses: [
-    { id: "boss.najka", name: "Scorpioness Najka", areaId: A, node: "shaded.najka", required: false, description: "Half-scorpion sorceress who burrows and casts Soul Spears. Manscorpion Tark can be summoned (Ring of Whispers).", drops: ["Soul of Najka"], note: "On the normal route to the Doors of Pharros and Brightstone Cove Tseldora (The Duke's Dear Freja).", source: FEX + "Scorpioness+Najka" },
+    { id: "boss.najka", name: "Scorpioness Najka", areaId: A, node: "shaded.najka", required: true, description: "Half-scorpion sorceress who burrows and casts Soul Spears. Manscorpion Tark can be summoned (Ring of Whispers).", drops: ["Soul of Najka"], note: "On the normal route to the Doors of Pharros and Brightstone Cove Tseldora (The Duke's Dear Freja). Fextralife counts it as required: only the 1,000,000 Soul Memory Shrine of Winter skip makes it optional.", source: FEX + "Scorpioness+Najka" },
   ],
   items: [
     i("Estus Flask Shard", "estus-shard", "shaded.entrance", "Chest in the room to the right of the stairs in the Grotesque cell building."),

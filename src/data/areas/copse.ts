@@ -35,7 +35,7 @@ export default finalize([4600, 3750], {
     { id: "copse.lockaway", name: "Undead Lockaway", areaId: A, note: "Locked cell across the lowered drawbridge; needs the Undead Lockaway Key from the canyon where Merciless Roenna invades.", source: SRC },
   ],
   bosses: [
-    { id: "boss.skeleton_lords", name: "The Skeleton Lords", areaId: A, node: "copse.skeleton_lords", required: false, description: "Three skeletal lords that spawn skeletons and bonewheels as they fall. Fog gate on the stairs by the waterfall.", drops: ["Skeleton Lord's Soul"], note: "Optional in the strict sense (Iron Keep can also be reached via the Shrine of Winter soul-memory skip), but on the normal route to Harvest Valley, Earthen Peak and the Old Iron King.", source: FEX + "Skeleton+Lords" },
+    { id: "boss.skeleton_lords", name: "The Skeleton Lords", areaId: A, node: "copse.skeleton_lords", required: true, description: "Three skeletal lords that spawn skeletons and bonewheels as they fall. Fog gate on the stairs by the waterfall.", drops: ["Skeleton Lord's Soul"], note: "Optional in the strict sense (Iron Keep can also be reached via the Shrine of Winter soul-memory skip), but on the normal route to Harvest Valley, Earthen Peak and the Old Iron King. Fextralife counts it as required: only the 1,000,000 Soul Memory Shrine of Winter skip makes it optional.", source: FEX + "Skeleton+Lords" },
   ],
   items: [
     i("Rouge Water", "consumable", "copse.entrance", "Corpse right at the start of the tunnel from Majula's rotunda."),

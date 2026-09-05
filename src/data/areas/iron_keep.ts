@@ -39,7 +39,7 @@ export default finalize([7050, 3950], {
   ],
   bosses: [
     { id: "boss.smelter_demon", name: "Smelter Demon", areaId: A, node: "ik.smelter", required: false, description: "Iron demon that ignites its own body and sword; fire damage on contact. Lucatiel can be summoned before the fog.", drops: ["Smelter Demon Soul"], note: "Optional per Fextralife: the keep beyond can be reached by warping to the Belfry Sol Approach bonfire (or via Belfry Sol) instead of clearing the arena. Drops nothing unique besides his soul; Smelter Demon Set becomes purchasable from Maughlin.", source: FEX + "Smelter+Demon" },
-    { id: "boss.old_iron_king", name: "Old Iron King", areaId: A, node: "ik.old_iron_king", required: false, description: "Great One rising from the lava; fought on a small stone platform. Fire breath and sweeping fists.", drops: ["Old Iron King Soul"], note: "One of the four Old Ones needed for the Shrine of Winter (or 1,000,000 soul memory).", source: FEX + "Old+Iron+King" },
+    { id: "boss.old_iron_king", name: "Old Iron King", areaId: A, node: "ik.old_iron_king", required: true, description: "Great One rising from the lava; fought on a small stone platform. Fire breath and sweeping fists.", drops: ["Old Iron King Soul"], note: "One of the four Old Ones needed for the Shrine of Winter (or 1,000,000 soul memory). Fextralife counts it as required: only the 1,000,000 Soul Memory Shrine of Winter skip makes it optional.", source: FEX + "Old+Iron+King" },
   ],
   items: [
     i("Human Effigy", "effigy", "ik.threshold", "Under the stairs by the Threshold Bridge bonfire."),

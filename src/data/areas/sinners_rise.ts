@@ -28,7 +28,7 @@ export default finalize([600, 1650], {
     { id: "sinners.primal", name: "Primal Bonfire (Lost Sinner)", areaId: A, primal: true, note: "Beyond the Lost Sinner; warps back to Majula. One of four needed for the Shrine of Winter.", source: SRC },
   ],
   bosses: [
-    { id: "boss.lost_sinner", name: "Lost Sinner", areaId: A, node: "sinners.lost_sinner", required: false, description: "Great One who tried to relight the First Flame. Fought in darkness unless the oil in the side rooms is lit (Bastille Key). In NG+ two pyromancer phantoms join her.", drops: ["Soul of the Lost Sinner"], note: "One of the four Old Ones. Not strictly required (Shrine of Winter opens at 1,000,000 soul memory) but part of the normal route.", source: FEX + "Lost+Sinner" },
+    { id: "boss.lost_sinner", name: "Lost Sinner", areaId: A, node: "sinners.lost_sinner", required: true, description: "Great One who tried to relight the First Flame. Fought in darkness unless the oil in the side rooms is lit (Bastille Key). In NG+ two pyromancer phantoms join her.", drops: ["Soul of the Lost Sinner"], note: "One of the four Old Ones. Not strictly required (Shrine of Winter opens at 1,000,000 soul memory) but part of the normal route. Fextralife counts it as required: only the 1,000,000 Soul Memory Shrine of Winter skip makes it optional.", source: FEX + "Lost+Sinner" },
   ],
   items: [
     i("Large Soul of a Lost Undead", "soul", "sinners.saltfort", "Doorway to the right after the ladder: corpse on a very small ledge."),

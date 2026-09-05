@@ -31,7 +31,7 @@ export default finalize([4700, 2600], {
     { id: "heide.tower_of_flame", name: "Tower of Flame", areaId: A, note: "Through the doorway and up the stairs after defeating the Dragonrider.", source: SRC },
   ],
   bosses: [
-    { id: "boss.dragonrider", name: "Dragonrider", areaId: A, node: "heide.dragonrider", required: false, description: "Halberd-and-greatshield knight in a small arena over the water; raising the platform with the levers gives more room. Guards the path onward to No-man's Wharf.", drops: ["Dragonrider Soul"], note: "Optional overall (Heide's can be bypassed via the Forest→Bastille eagle), but required to reach No-man's Wharf from Heide's.", source: FEX + "Dragonrider" },
+    { id: "boss.dragonrider", name: "Dragonrider", areaId: A, node: "heide.dragonrider", required: true, description: "Halberd-and-greatshield knight in a small arena over the water; raising the platform with the levers gives more room. Guards the path onward to No-man's Wharf.", drops: ["Dragonrider Soul"], note: "Optional overall (Heide's can be bypassed via the Forest→Bastille eagle), but required to reach No-man's Wharf from Heide's. Fextralife counts it as required: only the 1,000,000 Soul Memory Shrine of Winter skip makes it optional.", source: FEX + "Dragonrider" },
   ],
   items: [
     i("Soul of a Nameless Soldier", "soul", "heide.entrance", "Corpse draped over the railing behind the mace-wielding Old Knight up the first stairs (with Human Effigy)."),
