@@ -355,7 +355,7 @@ export const MapCanvas = forwardRef<MapCanvasHandle, Props>(function MapCanvas(
       if (!dragging.current && (Math.abs(vel.x) > 2 || Math.abs(vel.y) > 2)) {
         v.x -= vel.x * dt / v.zoom;
         v.y -= vel.y * dt / v.zoom;
-        const decay = Math.pow(0.02, dt);
+        const decay = Math.pow(0.004, dt);
         vel.x *= decay; vel.y *= decay;
         moving = true;
       } else if (!dragging.current) { vel.x = 0; vel.y = 0; }
@@ -449,7 +449,7 @@ export const MapCanvas = forwardRef<MapCanvasHandle, Props>(function MapCanvas(
         const v = vp.current;
         v.x -= dx / v.zoom; v.y -= dy / v.zoom;
         const dt = Math.max(1, now - lastPt.t) / 1000;
-        velocity.current = { x: dx / dt * 0.9, y: dy / dt * 0.9 };
+        velocity.current = { x: dx / dt * 0.45, y: dy / dt * 0.45 };
         lastPt = { ...p, t: now };
         if (Math.hypot(p.x - downPt.x, p.y - downPt.y) > 4) moved = true;
         clamp(); requestRender();
@@ -497,7 +497,19 @@ export const MapCanvas = forwardRef<MapCanvasHandle, Props>(function MapCanvas(
     const onDbl = (e: MouseEvent) => { const p = rel(e); zoomAt(p.x, p.y, 1.8); };
     const onKeyDown = (e: KeyboardEvent) => {
       if (["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "a", "s", "d", "w", "=", "+", "-", "_"].includes(e.key)) {
-        keys.current.add(e.key); e.preventDefault();
+        e.preventDefault();
+        if (!keys.current.has(e.key)) {
+          // immediate nudge so a single tap always moves a noticeable amount
+          const v = vp.current; const step = 60 / v.zoom;
+          if (e.key === "ArrowLeft" || e.key === "a") v.x -= step;
+          if (e.key === "ArrowRight" || e.key === "d") v.x += step;
+          if (e.key === "ArrowUp" || e.key === "w") v.y -= step;
+          if (e.key === "ArrowDown" || e.key === "s") v.y += step;
+          if (e.key === "=" || e.key === "+") v.zoom *= 1.15;
+          if (e.key === "-" || e.key === "_") v.zoom /= 1.15;
+          clamp(); requestRender();
+        }
+        keys.current.add(e.key);
       } else if (e.key === "Escape") onSelect(null);
       else if (e.key === "f" || e.key === "F") {
         const { w, h } = size.current;

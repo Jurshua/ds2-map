@@ -117,6 +117,7 @@ export default finalize([7050, 3950], {
     edge("ik.bridge", "ik.bull_hall", 1, "Through the door and up the small stairs."),
     edge("ik.bull_hall", "ik.furnace", 1, "Stairway on the right of Magerold's hall, through the illusory walls or the upper bull-hall door."),
     edge("ik.furnace", "ik.smelter", 1, "Lower the walkway with the lever and cross to the fog door."),
+    edge("ik.furnace", "ik.lava_hall", 2, "Skip the Smelter Demon: drop from the half-lowered walkway, turn the furnace wheel to shut off the furnace, then take the furnace doors and ladders up into the second half of the keep.", { requires: [req.event("Furnace wheel turned", "Shuts off the furnace so its doors are safe")] }),
     edge("ik.smelter", "ik.ironhearth", 1, "Up the stairs after the arena.", { requires: [req.boss("Smelter Demon")] }),
     edge("ik.ironhearth", "ik.lava_hall", 1, "Through the door, past the Captain, archway on the right and the narrow bridge."),
     edge("ik.lava_hall", "sol.approach", 1, "Pharros' door on the left, ladder up to the bonfire.", { requires: [req.lockstone("Door in the lever-platform hall")] }),

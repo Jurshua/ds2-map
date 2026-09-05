@@ -39,7 +39,7 @@ export default finalize([3600, 400], {
     { id: "dc.central", name: "Central Castle Drangleic", areaId: A, note: "Right after the Twin Dragonriders, next to Benhart of Jugo.", source: SRC },
   ],
   bosses: [
-    { id: "boss.twin_dragonriders", name: "Twin Dragonriders", areaId: A, node: "dc.twin_dragonriders", required: true, description: "Two Dragonriders, one on a balcony with a bow until it drops down. Pilgrim Bellclaire can be summoned.", drops: ["Dragonrider Soul (x2)"], note: "Required: blocks the way to the Central Castle bonfire, the King's Passage and Amana.", source: FEX + "Twin+Dragonriders" },
+    { id: "boss.twin_dragonriders", name: "Twin Dragonrider", areaId: A, node: "dc.twin_dragonriders", required: true, description: "Two Dragonriders, one on a balcony with a bow until it drops down. Pilgrim Bellclaire can be summoned.", drops: ["Dragonrider Soul (x2)"], note: "Required: blocks the way to the Central Castle bonfire, the King's Passage and Amana.", source: FEX + "Twin+Dragonriders" },
     { id: "boss.looking_glass_knight", name: "Looking Glass Knight", areaId: A, node: "dc.kings_passage", required: true, description: "Mirror-shielded knight in the King's Passage who summons phantoms (other players) through his shield. Benhart and Ashen Knight Boyd can be summoned.", drops: ["Looking Glass Knight Soul"], note: "Required: the elevator to the Shrine of Amana is beyond the arena.", source: FEX + "Looking+Glass+Knight" },
   ],
   items: [
@@ -118,7 +118,7 @@ export default finalize([3600, 400], {
     edge("dc.acid_yard", "dc.forgotten_chamber", 1, "Door after the painting room (Nameless Usurper), outside stairs, ladder down, illusory wall."),
     edge("dc.forgotten_chamber", "dc.throne_room", 1, "Back up the ladder and along the path to the queen's hall."),
     edge("dc.throne_room", "dc.twin_dragonriders", 1, "Side exit and the fog gate."),
-    edge("dc.twin_dragonriders", "dc.central", 1, "Right into the next area.", { requires: [req.boss("Twin Dragonriders")] }),
+    edge("dc.twin_dragonriders", "dc.central", 1, "Right into the next area.", { requires: [req.boss("Twin Dragonrider")] }),
     edge("dc.central", "dc.elevator_room", 1, "Down the stairs on the left."),
     edge("dc.elevator_room", "dc.chariot_stairs", 1, "Ladder on the right, golem room, Manikin room (activate the golem), chariot staircase."),
     edge("dc.chariot_stairs", "dc.central", 1, "Brown door at the bottom of the outside stair, lever gate, stairs down to the bonfire.", { kind: "shortcut" }),

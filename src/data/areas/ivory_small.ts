@@ -1,4 +1,4 @@
-import { finalize, it, node, edge, req, FEX } from "../helpers";
+import { finalize, it, node, edge, req, FEX, WD } from "../helpers";
 import type { AreaBundle } from "../helpers";
 
 // ---------- Grand Cathedral ----------
@@ -117,9 +117,13 @@ export const frigidOutskirts: AreaBundle = finalize([7400, 500], {
   ],
   items: [
     iF("Ring of the Living", "ring", "frigid.ruins", "Corpse along the path of boxes and barrels at the right-hand cliff edge before the bridge."),
-    iF("Mirrah Hat", "armor", "frigid.ruins", "Unmasked Lucatiel's hat; on a corpse in the ruins (Fextralife list).", { note: "Exact ruin not given by the wiki." }),
-    iF("Human Effigy", "effigy", "frigid.ruins", "Corpse in one of the three ruins (Fextralife list).", { note: "Exact ruin not given by the wiki." }),
-    iF("Wilted Dusk Herb", "consumable", "frigid.ruins", "Corpse in one of the three ruins (Fextralife list).", { note: "Exact ruin not given by the wiki." }),
+    iF("Mirrah Hat", "armor", "frigid.ruins", "Unmasked Lucatiel's hat, in a ruined house with a Dried Root (wikidot).", { source: WD + "frigid-outskirts" }),
+    iF("Human Effigy", "effigy", "frigid.ruins", "Corpse in the ruins between the coffin and the bridge (wikidot).", { qty: 2, source: WD + "frigid-outskirts" }),
+    iF("Wilted Dusk Herb", "consumable", "frigid.coffin", "Corpse under the coffin you rode in on (wikidot).", { source: WD + "frigid-outskirts" }),
+    iF("Blackweed Balm", "consumable", "frigid.coffin", "Corpse in a coffin to the right of where you land (wikidot).", { source: WD + "frigid-outskirts" }),
+    iF("Dried Root", "consumable", "frigid.ruins", "Ruined house with the Mirrah Hat (wikidot).", { source: WD + "frigid-outskirts" }),
+    iF("Lacerating Knife", "ammo", "frigid.ruins", "Corpse in the ruins (wikidot).", { qty: 20, source: WD + "frigid-outskirts" }),
+    iF("Twinkling Titanite", "twinkling", "frigid.ruins", "Corpse in the ruins (wikidot).", { qty: 2, source: WD + "frigid-outskirts" }),
     iF("Petrified Dragon Bone", "dragon-bone", "frigid.ruins", "Roughly 5% drop from Frozen Reindeer.", { note: "Enemy drop." }),
     iF("Bone Fist", "weapon", "frigid.ruins", "Rare drop from Frozen Reindeer.", { note: "Enemy drop." }),
   ],

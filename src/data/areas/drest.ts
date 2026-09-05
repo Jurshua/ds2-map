@@ -18,7 +18,7 @@ export default finalize([900, 6100], {
   },
   nodes: [
     node(A, "drest.entrance", "Broken stairs & switch room", "entrance", -300, -40, "Drops from the elevator building; Drakeblood Knight room with two floor switches and the Crystal Lizard vault."),
-    node(A, "drest.sanctum_interior", "Sanctum Interior", "bonfire", -120, 40, "Illusory wall in the middle of the left corridor after the Hexing Urn ledge and the second Drakeblood Knight."),
+    node("sanctum", "sanctum.interior", "Sanctum Interior", "bonfire", 1130, -320, "Illusory wall in the middle of the left corridor after the Hexing Urn ledge and the second Drakeblood Knight (lower Dragon's Sanctum, on the way down to Dragon's Rest)."),
     node(A, "drest.drakeblood_room", "Drakeblood Set room", "landmark", -40, 150, "Opened chests and the body with the Drakeblood Set past two Knights."),
     node(A, "drest.descent", "Descent to the nadir", "landmark", 80, -60, "Broken bridges and drops: Vine Balm, Twinkling Titanite, Small Smooth & Silky Stones."),
     node(A, "drest.elana", "Elana, the Squalid Queen arena", "boss", 200, 20, "Large fog gate at the bottom; Benhart and Steelheart Ellie's signs."),
@@ -26,7 +26,7 @@ export default finalize([900, 6100], {
     node(A, "drest.sinh", "Sinh, the Slumbering Dragon arena", "boss", 320, -80, "Small fog gate past the Sanctum Nadir bonfire."),
   ],
   bonfires: [
-    { id: "drest.sanctum_interior", name: "Sanctum Interior", areaId: A, note: "Illusory wall in the middle of the left corridor after descending past the Hexing Urn body (Fextralife lists it under the Dragon's Sanctum).", source: SRC },
+    { id: "sanctum.interior", name: "Sanctum Interior", areaId: "sanctum", note: "Illusory wall in the middle of the left corridor after descending past the Hexing Urn body, in the lower Dragon's Sanctum on the way to Dragon's Rest.", source: FEX + "Bonfires" },
     { id: "drest.sanctum_nadir", name: "Sanctum Nadir", areaId: A, note: "Behind the dragon wall that opens after Elana.", source: SRC },
   ],
   bosses: [
@@ -42,7 +42,7 @@ export default finalize([900, 6100], {
     i("Raw Stone", "titanite", "drest.entrance", "Crystal Lizard vault drops.", { qty: 2 }),
     i("Titanite Chunk", "titanite", "drest.entrance", "Crystal Lizard vault drops.", { qty: 3 }),
     i("Titanite Slab", "titanite", "drest.entrance", "Crystal Lizard vault drops."),
-    i("Hexing Urn", "consumable", "drest.sanctum_interior", "Body straight ahead after the stairs from the broken-pillar drops.", { qty: 10 }),
+    i("Hexing Urn", "consumable", "sanctum.interior", "Body straight ahead after the stairs from the broken-pillar drops.", { qty: 10 }),
     i("Drakeblood Set", "armor", "drest.drakeblood_room", "Body in the room of opened chests past two Drakeblood Knights, down the stairs from the bonfire."),
     i("Vine Balm", "consumable", "drest.descent", "Body after the run-jump platform (two Drakeblood Knights nearby).", { qty: 3 }),
     i("Twinkling Titanite", "twinkling", "drest.descent", "Body around the corner from the Vine Balm.", { qty: 3 }),
@@ -60,12 +60,12 @@ export default finalize([900, 6100], {
   ],
   features: [
     { id: "ft.drest.switches", name: "Floor switches (Crystal Lizard vault)", kind: "lever", areaId: A, node: "drest.entrance", description: "Right switch rotates the wheel to release four Crystal Lizards; left one only opens an empty room.", source: SRC },
-    { id: "ft.drest.illusory", name: "Illusory wall (Sanctum Interior)", kind: "illusory-wall", areaId: A, node: "drest.sanctum_interior", description: "Middle of the left corridor wall after the second Drakeblood Knight.", source: SRC },
+    { id: "ft.drest.illusory", name: "Illusory wall (Sanctum Interior)", kind: "illusory-wall", areaId: A, node: "sanctum.interior", description: "Middle of the left corridor wall after the second Drakeblood Knight.", source: SRC },
   ],
   edges: [
-    edge("drest.entrance", "drest.sanctum_interior", 1, "Broken bridge, pillar drops, stairs, Hexing Urn ledge, down the broken staircase, left twice.", { kind: "drop" }),
-    edge("drest.sanctum_interior", "drest.drakeblood_room", 1, "Stairs down past two Knights, left and left."),
-    edge("drest.sanctum_interior", "drest.descent", 1, "Right after the bonfire, broken bridge on the left, drops and a run-jump.", { kind: "drop", oneWay: true }),
+    edge("drest.entrance", "sanctum.interior", 1, "Broken bridge, pillar drops, stairs, Hexing Urn ledge, down the broken staircase, left twice.", { kind: "drop" }),
+    edge("sanctum.interior", "drest.drakeblood_room", 1, "Stairs down past two Knights, left and left."),
+    edge("sanctum.interior", "drest.descent", 1, "Right after the bonfire, broken bridge on the left, drops and a run-jump.", { kind: "drop", oneWay: true }),
     edge("drest.descent", "drest.elana", 1, "Dead end: drop right, keep dropping until the Dragon's Rest title.", { kind: "drop", oneWay: true }),
     edge("drest.elana", "drest.sanctum_nadir", 1, "The dragon wall opens after Elana.", { requires: [req.boss("Elana, the Squalid Queen")] }),
     edge("drest.sanctum_nadir", "drest.sinh", 1, "Small fog gate past the bonfire."),

@@ -56,6 +56,6 @@ export default finalize([6400, 5350], {
     edge("ip.lever_room", "ip.high_path", 1, "Pull the lever and run the fireball corridor past the grate before it closes.", { requires: [req.event("Run past the closing grate")], oneWay: true }),
     edge("ip.high_path", "ip.low_path", 1, "Drops from the high path ledges to the lower rooms.", { kind: "drop", oneWay: true }),
     edge("ip.low_path", "ip.blue_smelter", 1, "Final room with the Iron Warrior; enter the mist."),
-    edge("ip.blue_smelter", "ip.entrance", 1, "Elevator after the boss back to the entrance walkway.", { kind: "elevator", requires: [req.boss("Blue Smelter Demon")] }),
+    edge("ip.blue_smelter", "ip.entrance", 1, "Elevator after the boss back to the entrance walkway.", { kind: "elevator", oneWay: true, requires: [req.boss("Blue Smelter Demon")] }),
   ],
 }, SRC);

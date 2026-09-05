@@ -41,7 +41,7 @@ export default finalize([7200, 5000], {
     { id: "brume.smelter_throne", name: "Smelter Throne", areaId: A, note: "Elevators up from the Foyer, Tower Key door, elevator, right past the Prowlers and Ashen Idol; beside the glowing statue.", source: SRC },
   ],
   bosses: [
-    { id: "boss.fume_knight", name: "Fume Knight", areaId: A, node: "brume.fume_knight", required: false, dlc: "iron", description: "Raime, the Old Iron King's fallen knight. Sword-and-greatsword phase, then a flaming ultra greatsword. Destroy the four Ashen Idols outside or he heals. Drops nothing; the Crown is in the room beyond.", drops: ["Soul of the Fume Knight", "Crown of the Old Iron King (room beyond)"], note: "Optional DLC boss; required for the Memory of the Old Iron King.", source: FEX + "Fume+Knight" },
+    { id: "boss.fume_knight", name: "Fume Knight", areaId: A, node: "brume.fume_knight", required: false, dlc: "iron", description: "Raime, the Old Iron King's fallen knight. Sword-and-greatsword phase, then a flaming ultra greatsword. Destroy the four Ashen Idols outside or he heals. Drops his soul; the Crown is in the room beyond.", drops: ["Soul of the Fume Knight", "Crown of the Old Iron King (room beyond)"], note: "Optional DLC boss; required for the Memory of the Old Iron King.", source: FEX + "Fume+Knight" },
   ],
   items: [
     i("Smelter Wedge", "unique", "brume.entrance", "Ashen Idol remains up the stairs past the first fog gate.", { qty: 6 }),

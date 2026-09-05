@@ -335,7 +335,7 @@ export const enemies: Enemy[] = [
     source: FEX + "Crystal+Lizard",
   }),
   E({
-    id: "en.undead_devourer", name: "Undead Devourer (pig)", areaIds: ["majula", "tseldora"], node: "maj.village", despawns: true,
+    id: "en.undead_devourer", name: "Enslaved Pig (Undead Devourer)", areaIds: ["majula", "tseldora"], node: "maj.village", despawns: true,
     drops: [
       { item: "Cracked Red Eye Orb" },
     ],

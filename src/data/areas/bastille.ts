@@ -37,7 +37,7 @@ export default finalize([1400, 2100], {
     { id: "bast.tower_apart", name: "The Tower Apart", areaId: A, note: "Where the eagle drops you after the Pursuer in the Forest of Fallen Giants.", source: SRC },
   ],
   bosses: [
-    { id: "boss.ruin_sentinels", name: "Ruin Sentinels", areaId: A, node: "bast.sentinels", required: false, description: "Three golem knights: Yahim on the ledge, then Alessia and Ricce on the arena floor. Pilgrim Bellclaire can be summoned from the cell corridor.", drops: ["Ruin Sentinel Soul"], note: "Optional: Sinners' Rise can be reached with the Antiquated Key route from The Tower Apart, bypassing the arena.", source: FEX + "Ruin+Sentinels" },
+    { id: "boss.ruin_sentinels", name: "Ruin Sentinel", areaId: A, node: "bast.sentinels", required: false, description: "Three golem knights: Yahim on the ledge, then Alessia and Ricce on the arena floor. Pilgrim Bellclaire can be summoned from the cell corridor.", drops: ["Ruin Sentinel Soul"], note: "Optional: Sinners' Rise can be reached with the Antiquated Key route from The Tower Apart, bypassing the arena.", source: FEX + "Ruin+Sentinels" },
   ],
   items: [
     i("Scimitar", "weapon", "bast.exile", "Ride the top of the landing elevator back down to a break in the wall (with Repair Powder)."),
@@ -133,7 +133,7 @@ export default finalize([1400, 2100], {
     edge("bast.lucatiel_tower", "bast.swarm_room", 1, "Cross the broken stone over the chasm to the Royal Swordsman hall."),
     edge("bast.swarm_room", "bast.sentinels", 1, "Through the lever gate and the cell corridor, or down the stairs and up the ladder, to the mist."),
     edge("bast.lucatiel_tower", "bast.sentinels", 1, "Run-and-drop through the chasm shortcut door to the corridor before the arena.", { kind: "shortcut", oneWay: true, requires: [req.event("Chasm shortcut door opened from the swarm-room side")] }),
-    edge("bast.sentinels", "bast.servants", 1, "Exit door, stairs to the ledges, corridor of cells to the bonfire.", { requires: [req.boss("Ruin Sentinels")] }),
+    edge("bast.sentinels", "bast.servants", 1, "Exit door, stairs to the ledges, corridor of cells to the bonfire.", { requires: [req.boss("Ruin Sentinel")] }),
     edge("bast.servants", "luna.entrance", 1, "Pharros' Lockstone wall in the room below the bonfire.", { requires: [req.lockstone("Wall below the Servants' Quarters bonfire")] }),
     edge("bast.servants", "bast.urn_room", 1, "Door up the short stairs onto the parapet, through the tower to the mummy gate and the urn room."),
     edge("bast.urn_room", "bast.straid", 1, "Stairs up through the kamikaze-mummy rooms to the open-air cells."),
