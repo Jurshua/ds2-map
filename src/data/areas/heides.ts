@@ -55,6 +55,7 @@ export default finalize([4700, 2600], {
   ],
   npcs: [
     { id: "npc.licia", name: "Licia of Lindelt", areaId: A, node: "heide.tower_of_flame", role: "merchant", description: "Miracle merchant beside the Tower of Flame bonfire. Moves to the Majula rotunda after her dialogue; opens the path to Huntsman's Copse for 2,000 souls.", wares: ["Heal", "Force", "Caressing Prayer", "Ring of Prayer", "Cleric's Sacred Chime"], source: SRC },
+    { id: "npc.scarlett_heide", name: "Devotee Scarlett (summon)", areaId: A, node: "heide.dragonrider", role: "summon", description: "SotFS summon sign for the Dragonrider (also before the drawbridge dragon if summoned earlier at Earthen Peak).", source: "http://darksouls2.wikidot.com/bosses" },
     { id: "npc.glencour", name: "Masterless Glencour (summon)", areaId: A, node: "heide.dragonrider", role: "summon", description: "NPC summon sign outside and to the right of the Dragonrider mist.", source: SRC },
   ],
   features: [

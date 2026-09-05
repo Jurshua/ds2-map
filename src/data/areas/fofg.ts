@@ -154,7 +154,7 @@ export default finalize([2200, 3400], {
     { id: "npc.cale", name: "Cale the Cartographer", areaId: A, node: "fofg.rooftops", role: "npc", description: "Crawling in the boulder-trap cave on the rooftops. Gives the House Key for the Majula mansion.", source: SRC },
     { id: "npc.pate", name: "Mild Mannered Pate", areaId: A, node: "fofg.pate", role: "summon", description: "Sits by the trap gate. Gives the White Sign Soapstone; can be summoned for the Last Giant. Later appears in Earthen Peak and Brightstone Cove.", source: SRC },
     { id: "npc.luet_fofg", name: "Sellsword Luet (shade)", areaId: A, node: "fofg.last_giant", role: "summon", description: "SotFS shade summon sign outside the Last Giant's fog.", source: "http://darksouls2.wikidot.com/scholar-of-the-first-sin" },
-    { id: "npc.alfis", name: "Ruined Alfis (shade)", areaId: A, node: "fofg.soldiers_rest", role: "summon", description: "Shade summon sign next to the doorway of the dark skeleton hall behind the Soldier Key door.", source: SRC },
+    { id: "npc.alfis", name: "Ruined Alfis (shade)", areaId: A, node: "fofg.soldiers_rest", role: "summon", description: "Shade summon sign next to the doorway of the dark skeleton hall behind the Soldier Key door; usable for the Pursuer (SotFS).", source: SRC },
     { id: "npc.dennis", name: "Armorer Dennis (invader)", areaId: A, node: "fofg.soldiers_rest", role: "npc", description: "Dark Spirit that invades in the Soldier's Rest area; drops the Cracked Red Eye Orb / Elite Knight gear chance.", source: SRC },
   ],
   features: [
