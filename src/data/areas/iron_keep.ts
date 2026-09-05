@@ -43,7 +43,7 @@ export default finalize([7050, 3950], {
   ],
   items: [
     i("Human Effigy", "effigy", "ik.threshold", "Under the stairs by the Threshold Bridge bonfire."),
-    i("Bonfire Ascetic", "ascetic", "ik.bridge", "Broken floor halfway across the bridge, down several lava platforms; needs high fire defence."),
+    i("Bonfire Ascetic", "ascetic", "ik.bridge", "Broken floor halfway across the bridge, down several lava platforms; needs high fire defence (x3 in SotFS).", { qty: 3, source: FEX + "Bonfire+Ascetic" }),
     i("Iron Key", "key", "ik.bull_hall", "Corpse behind the flaming bull head just inside the keep; approach from the left in the gaps of the flame. Opens the Flame Lizard pit door in the Forest of Fallen Giants."),
     i("Covetous Gold Serpent Ring +1", "ring", "ik.bull_hall", "Given by Magerold of Lanafir after spending 10,000 souls in his shop."),
     i("Fragrant Branch of Yore", "branch", "ik.bull_hall", "Sold by Magerold of Lanafir (7,500 souls).", { note: "Purchase, listed by the wiki." }),

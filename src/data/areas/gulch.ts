@@ -49,6 +49,7 @@ export default finalize([3600, 5300], {
     i("Radiant Lifegem", "lifegem", "gulch.big_gully", "Corpse hidden in a jar in the big gully."),
     i("Divine Blessing", "consumable", "gulch.big_gully", "Chest in the cave on the left of the big gully, surrounded by poison statues."),
     i("Pharros' Lockstone", "lockstone", "gulch.hidden_chamber", "Corpse in the jar behind the Hidden Chamber bonfire.", { prerequisites: ["Fragrant Branch of Yore (SotFS petrified hollow)"] }),
+    i("Pharros' Lockstone", "lockstone", "gulch.rotten", "Cut off the Rotten's left arm (the one without the cleaver) during the fight.", { note: "Boss part drop.", source: FEX + "Pharros'+Lockstone" }),
     i("Fire Seed", "consumable", "gulch.rotten", "Corpse in the Rotten's arena; cross a patch of fire to reach it.", { prerequisites: ["The Rotten defeated"] }),
     i("Petrified Something", "unique", "gulch.primal", "Chest in the small room on the right of the tunnel after the Rotten (with Simpleton's Spice, Skeptic's Spice).", { prerequisites: ["The Rotten defeated"] }),
     i("Simpleton's Spice", "consumable", "gulch.primal", "Chest after the Rotten.", { prerequisites: ["The Rotten defeated"] }),

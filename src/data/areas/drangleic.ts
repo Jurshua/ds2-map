@@ -82,6 +82,8 @@ export default finalize([3600, 400], {
     i("Soul Vessel", "soul-vessel", "dc.embedded", "Chest in the Embedded's room.", { prerequisites: ["Elevator golem activated"] }),
     i("Strong Magic Shield", "spell", "dc.embedded", "Third chest in the Embedded's room.", { prerequisites: ["Elevator golem activated"] }),
     i("Small Smooth & Silky Stone", "unique", "dc.embedded", "Attack the bars opposite the Embedded to drop the hidden hollow."),
+    i("Bonfire Ascetic", "ascetic", "dc.kings_passage", "Iron chest after the Looking Glass Knight, near the elevator down to the Shrine of Amana.", { qty: 3, prerequisites: ["Looking Glass Knight defeated"], source: FEX + "Bonfire+Ascetic" }),
+    i("Twinkling Titanite", "twinkling", "dc.kings_passage", "Corpse in the King's Passage just before the Looking Glass Knight.", { source: FEX + "Twinkling+Titanite" }),
     i("Stone Soldier Spear", "weapon", "dc.golem_hall", "Dropped by Stone Soldiers.", { note: "Enemy drop." }),
     i("Stone Twinblade", "weapon", "dc.golem_hall", "Dropped by Stone Soldiers.", { note: "Enemy drop." }),
     i("Spell Quartz Ring +2", "ring", "dc.acid_yard", "Listed by Fextralife for Drangleic Castle.", { note: "Exact spot not given on the area page (dropped by the Nameless Usurper invader)." }),

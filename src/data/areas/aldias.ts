@@ -78,7 +78,9 @@ export default finalize([4800, 1300], {
     i("Corrosive Urn", "consumable", "aldias.cage_hall", "Dropped by the caged Giant Poison Brumer after the cages fall.", { prerequisites: ["Aldia Key"] }),
     i("Black Witch's Staff", "weapon", "aldias.cage_hall", "Dropped by a caged Mimic after the cages fall.", { prerequisites: ["Aldia Key"] }),
     i("Dragon Scale", "unique", "aldias.guardian_dragon", "Corpse outside the arena after the Guardian Dragon, before the elevator.", { prerequisites: ["Guardian Dragon defeated"] }),
-    i("Elizabeth Mushroom", "consumable", "aldias.basilisk_cage", "Listed by Fextralife for Aldia's Keep.", { qty: 2, note: "Exact spot not given by the wiki." }),
+    i("Bonfire Ascetic", "ascetic", "aldias.basilisk_cage", "Un-petrify the left-hand statue in front of the caged Great Basilisk (Fragrant Branch); it drops 2 Ascetics and respawns with an Ascetic burned at Foregarden.", { qty: 2, prerequisites: ["Fragrant Branch of Yore"], source: FEX + "Fragrant+Branch+of+Yore" }),
+    i("Wilted Dusk Herb", "consumable", "aldias.basilisk_cage", "Un-petrify the right-hand statue in front of the caged Basilisk (with 2x Elizabeth Mushroom).", { qty: 2, prerequisites: ["Fragrant Branch of Yore"], source: FEX + "Fragrant+Branch+of+Yore" }),
+    i("Elizabeth Mushroom", "consumable", "aldias.basilisk_cage", "Un-petrify the right-hand statue in front of the caged Basilisk.", { qty: 2, prerequisites: ["Fragrant Branch of Yore"], source: FEX + "Fragrant+Branch+of+Yore" }),
   ],
   npcs: [
     { id: "npc.navlaan", name: "Royal Sorcerer Navlaan", areaId: A, node: "aldias.navlaan", role: "merchant", description: "Sealed behind a magic barrier. Assassin persona when hollow gives fetch quests; freeing him (lever left of the archways) lets him invade elsewhere. Sells sorceries and Forbidden Sun.", wares: ["Forbidden Sun", "Unleash Magic", "Chaos Storm", "Dark Orb"], source: SRC },
@@ -94,6 +96,7 @@ export default finalize([4800, 1300], {
     { id: "ft.aldias.pharros", name: "Pharros' light contraption", kind: "pharros", areaId: A, node: "aldias.cage_hall", requires: "Pharros' Lockstone", description: "Illuminates the cage hall.", source: SRC },
     { id: "ft.aldias.ritual_wall", name: "Illusory wall (Ritual Site)", kind: "illusory-wall", areaId: A, node: "aldias.ritual_site", description: "Left side halfway down the laboratory stairs.", source: SRC },
     { id: "ft.aldias.key_doors", name: "Aldia Key doors", kind: "locked-door", areaId: A, node: "aldias.cage_hall", requires: "Aldia Key", description: "Two locked doors in the cage hall to the Mimic room with the cage-drop lever (Prowling Magus and three Mimics in SotFS).", source: SRC },
+    { id: "ft.aldias.statues", name: "Petrified statues (Basilisk cage)", kind: "locked-door", areaId: A, node: "aldias.basilisk_cage", requires: "Fragrant Branch of Yore", description: "Two petrified hollows in front of the caged Great Basilisk: left drops 2 Bonfire Ascetics, right drops Wilted Dusk Herbs and Elizabeth Mushrooms.", source: FEX + "Fragrant+Branch+of+Yore" },
     { id: "ft.aldias.ogre_gate", name: "Ogre-breakable iron gates", kind: "shortcut", areaId: A, node: "aldias.ogre_doors", description: "Lure an Ogre to smash the big iron doors for the Malformed Shell chest.", source: SRC },
   ],
   edges: [

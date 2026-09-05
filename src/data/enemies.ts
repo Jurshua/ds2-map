@@ -411,4 +411,21 @@ export const enemies: Enemy[] = [
     farmingNote: "Burn a Bonfire Ascetic at The Place Unbeknownst, run the memory in 3–4 minutes, pick up the Ascetic on the battlement and repeat: the best soul farm in the game (up to ~540,000 souls per run at +7 intensity with Nahr Alma / Tseldora soul gear).",
     source: FEX + "Memory+of+Jeigh",
   }),
+  E({
+    id: "en.ashen_crawler", name: "Ashen Crawler", areaIds: ["brume"], node: "brume.scepter_route", despawns: true,
+    drops: [
+      { item: "Bonfire Ascetic", rate: "uncommon", note: "no drop if the crawler explodes" },
+    ],
+    farmingNote: "Exploding ash creatures; a large group lives in the tower where the Scorching Iron Scepter sits (across the chain past the Foyer bonfire). Kill them before they explode (light them and back off) to farm Bonfire Ascetics.",
+    source: FEX + "Bonfire+Ascetic",
+  }),
+  E({
+    id: "en.mongrel_rat", name: "Mongrel Rat (Doors of Pharros)", areaIds: ["pharros", "grave_saints"], node: "pharros.main_hall", despawns: true,
+    drops: [
+      { item: "Pharros' Lockstone", rate: "8%" },
+      { item: "Rat Tail" },
+    ],
+    farmingNote: "Rats in the water of the Doors of Pharros drop Pharros' Lockstones (8%); the small rats summoned by the Royal Rat Authority also drop them and reset with the boss fight. Rat Tails feed the Rat King covenant.",
+    source: FEX + "Pharros'+Lockstone",
+  }),
 ];

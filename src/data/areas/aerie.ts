@@ -52,7 +52,7 @@ export default finalize([5900, 1400], {
     i("Twinkling Titanite", "twinkling", "aerie.dragon3", "Crystal Lizards throughout the Aerie (11 in SotFS) drop roughly 6-10 Twinkling Titanite in total.", { qty: 6, note: "Crystal Lizard drops; count is approximate per Fextralife." }),
     i("Petrified Dragon Bone", "dragon-bone", "aerie.dragon3", "Crystal Lizards throughout the Aerie drop roughly 6-10 Petrified Dragon Bone in total.", { qty: 6, note: "Crystal Lizard drops; count is approximate per Fextralife." }),
     i("Petrified Something", "unique", "aerie.cave", "Listed by Fextralife for the Aerie (x2), on corpses among the dragon areas.", { qty: 2, note: "Exact spot not given by the wiki." }),
-    i("Pharros' Lockstone", "lockstone", "aerie.dragon2", "Listed by Fextralife for the Aerie.", { note: "Exact spot not given by the wiki." }),
+    i("Pharros' Lockstone", "lockstone", "aerie.dragon2", "Between the second and third dragons, drop down the ledge to a corpse.", { source: FEX + "Pharros'+Lockstone" }),
     i("Large Soul of a Brave Warrior", "soul", "aerie.dragon3", "Second Large Soul of a Brave Warrior listed by Fextralife for the Aerie.", { note: "Exact spot not given by the wiki." }),
   ],
   npcs: [

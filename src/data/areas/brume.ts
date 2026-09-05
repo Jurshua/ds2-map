@@ -93,6 +93,8 @@ export default finalize([7200, 5000], {
     i("Human Effigy", "effigy", "brume.tower_key_field", "Iron Warrior ash field.", { qty: 2 }),
     i("Skeptic's Spice", "consumable", "brume.tower_key_field", "Iron Warrior ash field."),
     i("Twilight Herb", "consumable", "brume.tower_key_field", "Body on the right down the stairs after the Tower Key door, before the Iron Passage elevator.", { qty: 2, prerequisites: ["Tower Key"] }),
+    i("Bonfire Ascetic", "ascetic", "brume.patched_floors", "Iron chest on the ledge with the first Possessed Armor below the Foyer elevators (with 2x Human Effigy).", { source: FEX + "Bonfire+Ascetic" }),
+    i("Human Effigy", "effigy", "brume.patched_floors", "Iron chest on the first Possessed Armor ledge.", { qty: 2, source: FEX + "Bonfire+Ascetic" }),
     i("Strength Ring", "ring", "brume.patched_floors", "Jump from the second descending elevator to the platform above; chest on the left."),
     i("Partizan +6", "weapon", "brume.patched_floors", "Body on the sixth patched floor (two Ashen Warriors)."),
     i("Sorcery Clutch Ring", "ring", "brume.patched_floors", "Right doorway after the Possessed Armors."),

@@ -84,7 +84,6 @@ export default finalize([1650, 5550], {
     i("Sanctum Shield", "shield", "sanctum.key_door", "Top of the third ladder in the key wing past the Egg Crawlers.", { prerequisites: ["Eternal Sanctum Key"] }),
     i("Torch", "consumable", "sanctum.key_door", "Jump off the Priestess' Chamber elevator halfway down; corpse on that level.", { qty: 5, prerequisites: ["Eternal Sanctum Key"] }),
     i("Dark Greatsword", "spell", "sanctum.key_door", "Chest further around the mid-elevator level.", { prerequisites: ["Eternal Sanctum Key"] }),
-    i("Bonfire Ascetic", "ascetic", "sanctum.knight_room", "Listed by Fextralife for the Sanctum.", { note: "Exact spot not given in the walkthrough." }),
     i("Titanite Slab", "titanite", "sanctum.lair", "Rare drop from the Imperfects (also Petrified Dragon Bone).", { note: "Enemy drop." }),
   ],
   npcs: [

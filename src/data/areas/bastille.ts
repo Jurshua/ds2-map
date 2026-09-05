@@ -104,7 +104,6 @@ export default finalize([1400, 2100], {
     i("Parrying Dagger", "weapon", "bast.well_courtyard", "First right chest in the two-statue room.", { prerequisites: ["Antiquated Key"] }),
     i("Twinblade", "weapon", "bast.well_courtyard", "Last chest in the two-statue room.", { prerequisites: ["Antiquated Key"] }),
     i("Soul Vessel", "soul-vessel", "bast.well_courtyard", "Pharros' Lockstone in the statue room reveals two passages; the left one hides the chest.", { prerequisites: ["Antiquated Key", "Pharros' Lockstone"] }),
-    i("Bonfire Ascetic", "ascetic", "bast.well_courtyard", "Corpse visible when riding the cell elevator up from the bottom; roll off to grab it.", { note: "Fextralife lists one Bonfire Ascetic for the area, reachable from either end of the cell elevator." }),
     i("Twilight Herb", "consumable", "bast.courtyard", "Dropped by Undead Jailers (Mummies) in the Bastille.", { note: "Enemy drop listed under the area." }),
     i("Lingering Flame", "spell", "bast.courtyard", "Dropped by Undead Jailers in the Bastille.", { note: "Enemy drop listed under the area." }),
   ],

@@ -66,6 +66,9 @@ export default finalize([3600, 3100], {
     i("Poison Moss", "consumable", "maj.pit", "Third set of boards in the pit.", { qty: 3 }),
     i("Ring of the Evil Eye +1", "ring", "maj.pit", "Board-jumping further down the pit, below the ladder ledge, before the torch-lined ledge at the bottom."),
     i("Homeward Bone", "consumable", "maj.pit", "Corpse on the boards in the pit (listed under Majula; could be considered Grave of Saints)."),
+    i("Fragrant Branch of Yore", "branch", "maj.village", "Sold by Merchant Hag Melentia (12,000 souls; only one) once she has moved to Majula.", { note: "Purchase.", source: FEX + "Fragrant+Branch+of+Yore" }),
+    i("Pharros' Lockstone", "lockstone", "maj.village", "Sold by Merchant Hag Melentia (only one).", { note: "Purchase.", source: FEX + "Pharros'+Lockstone" }),
+    i("Soul Vessel", "soul-vessel", "maj.victors_stone", "Given by Crestfallen Saulden once four NPCs have moved to Majula.", { note: "NPC reward.", source: FEX + "Soul+Vessel" }),
     i("Ring of Steel Protection", "ring", "maj.village", "Purchased from Maughlin the Armourer once his stock expands (after spending 16,000 souls with him).", { note: "Fextralife lists this on the Majula page as a purchase, not a ground pickup." }),
   ],
   npcs: [
