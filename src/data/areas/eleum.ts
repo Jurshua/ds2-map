@@ -98,7 +98,7 @@ export default finalize([5650, 450], {
   edges: [
     edge("eleum.entrance", "eleum.outer_wall", 1, "Through the iron door and up the stairs."),
     edge("eleum.outer_wall", "eleum.aava", 1, "Across the blizzard bridge to the mist (Eye of the Priestess to see her).", { requires: [req.item("Eye of the Priestess", "Altar in the upper city; needed to see Aava")] }),
-    edge("eleum.aava", "gc.bonfire", 1, "Doorway and stairs up after Aava; Frozen Flower door.", { requires: [req.boss("Aava, the King's Pet"), req.key("Frozen Flower", "Corpse in Drangleic Castle (SotFS)")] }),
+    edge("eleum.aava", "gc.bonfire", 1, "Doorway and stairs up after Aava to the Grand Cathedral doors.", { requires: [req.boss("Aava, the King's Pet")] }),
     edge("eleum.outer_wall", "eleum.lower_stairs", 1, "Opening ahead, turn right and down the stairs."),
     edge("eleum.lower_stairs", "eleum.fountain", 1, "Down to the snow and along the right path to the fountain."),
     edge("eleum.fountain", "eleum.golem_stairs", 1, "Crate room, left door, stairs up to the Rampart Golem."),

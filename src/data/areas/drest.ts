@@ -38,7 +38,7 @@ export default finalize([900, 6100], {
     i("Faintstone", "titanite", "drest.entrance", "Crystal Lizard vault drops.", { qty: 2 }),
     i("Firedrake Stone", "consumable", "drest.entrance", "Crystal Lizard vault drops.", { qty: 2 }),
     i("Old Mundane Stone", "titanite", "drest.entrance", "Crystal Lizard vault drops.", { qty: 2 }),
-    i("Petrified Dragon Bone", "dragon-bone", "drest.entrance", "Crystal Lizard vault drops.", { qty: 3 }),
+    i("Petrified Dragon Bone", "dragon-bone", "drest.entrance", "Crystal Lizard vault drops.", { qty: 2, note: "Fextralife's item list says 2; its walkthrough text says 3." }),
     i("Raw Stone", "titanite", "drest.entrance", "Crystal Lizard vault drops.", { qty: 2 }),
     i("Titanite Chunk", "titanite", "drest.entrance", "Crystal Lizard vault drops.", { qty: 3 }),
     i("Titanite Slab", "titanite", "drest.entrance", "Crystal Lizard vault drops."),

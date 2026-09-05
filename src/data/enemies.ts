@@ -85,7 +85,7 @@ export const enemies: Enemy[] = [
       { item: "Firedrake Stone" },
       { item: "Titanite Slab", rate: "rare" },
     ],
-    farmingNote: "Headless lava giants. Three emerge from the ash field below the Foyer elevator (Tower Key field); two guard the Lowermost Floor bonfire. Barrel Carriers or flame jets kill them quickly. Rare Titanite Slab drop.",
+    farmingNote: "Headless lava giants. Three emerge from the ash field below the Foyer elevator (Tower Key field); two guard the Lowermost Floor bonfire; one more waits in the Iron Passage's last room (per the Iron Passage page). Barrel Carriers or flame jets kill them quickly. Rare Titanite Slab drop.",
     source: FEX + "Iron+Warrior",
   }),
   E({
@@ -131,7 +131,7 @@ export const enemies: Enemy[] = [
   E({
     id: "en.old_knight", name: "Old Knight", areaIds: ["heides"], node: "heide.three_knights", despawns: true,
     drops: [
-      { item: "Old Knight Greatsword / Ultra Greatsword / Hammer" },
+      { item: "Old Knight Greatsword", note: "the ultra-greatsword wielders drop the Old Knight Ultra Greatsword" },
       { item: "Old Knight Set" },
       { item: "Old Knight Shield" },
       { item: "Cracked Blue Eye Orb" },
@@ -259,7 +259,7 @@ export const enemies: Enemy[] = [
   E({
     id: "en.dragon_acolyte", name: "Dragon Acolyte", areaIds: ["aldias", "tseldora"], node: "aldias.cage_hall", despawns: true,
     drops: [
-      { item: "Petrified Dragon Bone", rate: "good drop rate (NG and NG+)" },
+      { item: "Petrified Dragon Bone", note: "no rate given; Fextralife's recommended PDB farm" },
       { item: "Dragon Acolyte Set" },
       { item: "Witching Urn" },
     ],

@@ -140,7 +140,7 @@ export default function MapApp() {
         </footer>
       </aside>
       <main className="relative order-1 min-h-0 flex-1 md:order-2">
-        <MapCanvas ref={mapRef} markers={visible} selected={selected} route={routeForMap} collected={collected} onSelect={(m) => select(m)} onSelectNode={onSelectNode} />
+        <MapCanvas ref={mapRef} markers={visible} selected={selected} route={routeForMap} collected={collected} onSelect={(m) => select(m)} onSelectNode={onSelectNode} onSelectArea={(id) => { const ar = areaById.get(id); if (ar) mapRef.current?.flyTo(ar.label[0], ar.label[1] + 60, 1.0); }} />
         <div className="pointer-events-none absolute left-2 top-2 flex flex-col gap-1">
           <button className="btn pointer-events-auto" onClick={() => mapRef.current?.fitWorld()} title="Fit the whole map (F)">Fit map</button>
           {start && <span className="rounded bg-black/70 px-2 py-0.5 text-[11px] text-amber-100">Route start: {start.name}</span>}

@@ -52,7 +52,7 @@ export default finalize([3600, 400], {
     i("Royal Soldier's Ring +1", "ring", "dc.golem_hall", "Last golem room on the right side (Ruin Sentinel)."),
     i("Titanite Slab", "titanite", "dc.golem_hall", "Rare drop from the infinitely respawning Stone Soldiers.", { note: "Enemy drop." }),
     i("Dark Arrow", "ammo", "dc.acid_yard", "Chest straight ahead after the first right-hand golem door.", { qty: 15 }),
-    i("Frozen Flower", "key", "dc.acid_yard", "SotFS: corpse up the stairs to the right after the Dark Arrow chest. Opens the Grand Cathedral in Eleum Loyce.", { source: WDS }),
+    i("Frozen Flower", "key", "dc.acid_yard", "SotFS: corpse up the stairs to the right after the Dark Arrow chest. Grants access to Frozen Eleum Loyce (Shrine of Winter obelisk).", { source: WDS }),
     i("Old Radiant Lifegem", "lifegem", "dc.acid_yard", "Skeleton beneath the stairwell (with Monastery Charm, Soul of a Hero; Great Magic Barrier in NG+).", { qty: 3 }),
     i("Monastery Charm", "consumable", "dc.acid_yard", "Skeleton beneath the stairwell."),
     i("Soul of a Hero", "soul", "dc.acid_yard", "Skeleton beneath the stairwell."),

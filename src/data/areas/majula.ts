@@ -25,6 +25,7 @@ export default finalize([3600, 3100], {
     node(A, "maj.rotunda", "Rotunda contraption", "landmark", 280, -140, "Circular room with the rotating pillar. Licia opens the way to Huntsman's Copse; spiral stair continues to Heide's."),
     node(A, "maj.heide_passage", "Waterway to Heide's", "landmark", 340, -60, "Pull-chain doors and a flooded corridor leading to Heide's Tower of Flame."),
     node(A, "maj.forest_tunnel", "Tunnel to the Forest", "landmark", -260, 40, "Crumbled wall by the coast; lever-gate, wooden bridge and stream to the Forest of Fallen Giants."),
+    node(A, "maj.forgotten_door", "Forgotten Key door (pit)", "landmark", -140, 90, "Locked door on the ledge part-way down the pit (reached via Gilligan's ladder or the Silvercat drop); Forgotten Key from the Black Gulch giants."),
     node(A, "maj.shaded_gate", "Rosabeth's gate", "landmark", -140, -220, "Round chamber up the hill past Benhart; petrified Rosabeth blocks the lever to the Shaded Woods."),
   ],
   bonfires: [
@@ -69,6 +70,11 @@ export default finalize([3600, 3100], {
     i("Fragrant Branch of Yore", "branch", "maj.village", "Sold by Merchant Hag Melentia (12,000 souls; only one) once she has moved to Majula.", { note: "Purchase.", source: FEX + "Fragrant+Branch+of+Yore" }),
     i("Pharros' Lockstone", "lockstone", "maj.village", "Sold by Merchant Hag Melentia (only one).", { note: "Purchase.", source: FEX + "Pharros'+Lockstone" }),
     i("Soul Vessel", "soul-vessel", "maj.victors_stone", "Given by Crestfallen Saulden once four NPCs have moved to Majula.", { note: "NPC reward.", source: FEX + "Soul+Vessel" }),
+    i("Dragon Talon", "key", "maj.forgotten_door", "Corpse in the Forgotten Key room in Majula's pit (SotFS). Activates the obelisk to Shulva at the Rotten's Primal Bonfire.", { prerequisites: ["Forgotten Key"], source: FEX + "Forgotten+Key" }),
+    i("Witchtree Bellvine", "weapon", "maj.forgotten_door", "Chest in the Forgotten Key room in Majula's pit.", { prerequisites: ["Forgotten Key"], source: FEX + "Forgotten+Key" }),
+    i("Witchtree Branch", "weapon", "maj.forgotten_door", "Chest in the Forgotten Key room in Majula's pit.", { prerequisites: ["Forgotten Key"], source: FEX + "Forgotten+Key" }),
+    i("Soul Vortex", "spell", "maj.forgotten_door", "Chest in the Forgotten Key room in Majula's pit.", { prerequisites: ["Forgotten Key"], source: FEX + "Forgotten+Key" }),
+    i("Great Lightning Spear", "spell", "maj.forgotten_door", "Chest in the Forgotten Key room in Majula's pit.", { prerequisites: ["Forgotten Key"], source: FEX + "Forgotten+Key" }),
     i("Ring of Steel Protection", "ring", "maj.village", "Purchased from Maughlin the Armourer once his stock expands (after spending 16,000 souls with him).", { note: "Fextralife lists this on the Majula page as a purchase, not a ground pickup." }),
   ],
   npcs: [
@@ -93,6 +99,7 @@ export default finalize([3600, 3100], {
     { id: "ft.maj.victors", name: "Victor's Stone (Company of Champions)", kind: "covenant", areaId: A, node: "maj.victors_stone", description: "Kneel to join the Company of Champions. Enemies deal more damage and stop despawning; co-op disabled.", source: SRC },
     { id: "ft.maj.wayofblue", name: "Way of Blue (Crestfallen Saulden)", kind: "covenant", areaId: A, node: "maj.victors_stone", description: "Join through Saulden to be helped by Blue Sentinels when invaded.", source: SRC },
     { id: "ft.maj.lenigrast", name: "Lenigrast's workshop door", kind: "locked-door", areaId: A, node: "maj.village", requires: "Lenigrast's Key", description: "Bought from Merchant Hag Melentia for 1,000 souls.", source: SRC },
+    { id: "ft.maj.forgotten_door", name: "Forgotten Key door (pit)", kind: "locked-door", areaId: A, node: "maj.forgotten_door", requires: "Forgotten Key", description: "Door on the ledge in the pit; the key drops from the two Giants below the Black Gulch. Inside: Dragon Talon, Witchtree Bellvine, Witchtree Branch, Soul Vortex, Great Lightning Spear.", source: FEX + "Forgotten+Key" },
     { id: "ft.maj.pit_ladders", name: "Pit ladders (Gilligan)", kind: "shortcut", areaId: A, node: "maj.pit", requires: "Gilligan's ladder (up to 12,000 souls) or Silvercat Ring", description: "Ladders rented from Laddersmith Gilligan let you descend the pit safely toward the Grave of Saints and The Gutter.", source: SRC },
   ],
   edges: [
@@ -110,6 +117,7 @@ export default finalize([3600, 3100], {
     edge("maj.forest_tunnel", "fofg.entrance", 2, "Lever-gate, wooden bridge over the stream, then follow the stream left."),
     edge("maj.shaded_gate", "shaded.entrance", 2, "Lever behind Rosabeth's statue opens the door to the Shaded Woods.", { requires: [req.branch("Rosabeth of Melfia is petrified in front of the lever")] }),
     edge("maj.pit", "grave.ledge", 3, "Drop board-to-board (Silvercat Ring, or Gilligan's ladders) to the torch-lined ledge that enters the Grave of Saints.", { oneWay: true, kind: "drop", requires: [req.event("Silvercat Ring (13,400 from Shalquoir) or Gilligan's ladder", "Without them the fall is fatal")] }),
+    edge("maj.pit", "maj.forgotten_door", 1, "Ledge with the locked door part-way down the pit (Gilligan's ladder or Silvercat drop).", { oneWay: true, kind: "drop", requires: [req.event("Silvercat Ring or Gilligan's ladder"), req.key("Forgotten Key", "From the Giants under the Black Gulch")] }),
     edge("maj.pit", "gutter.upper", 4, "Bottom of the pit: Crystal Lizard bridge, Ash Knuckle Ring chest, then the mummy cave and scaffolding ladders down into The Gutter (one-way).", { oneWay: true, kind: "drop", requires: [req.event("Silvercat Ring or Gilligan's 12,000-soul ladder")] }),
   ],
 }, SRC);

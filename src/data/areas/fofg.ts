@@ -144,7 +144,7 @@ export default finalize([2200, 3400], {
     i("Flame Quartz Ring +1", "ring", "fofg.lizard_pit", "Chest in the first section of the Flame Lizard pit."),
     i("Cracked Red Eye Orb", "consumable", "fofg.lizard_pit", "Corpse in the lower area of the Flame Lizard pit.", { qty: 2 }),
     i("Rebel's Greatshield", "shield", "fofg.lizard_pit", "Skeleton in the chamber with the last Flame Salamander."),
-    i("Heavy Iron Key", "key", "fofg.lizard_pit", "Skeleton in the chamber with the last Flame Salamander (with Rebel's Greatshield). Opens the Iron Keep's Belfry Sol / Smelter Demon-side door.", { note: "Fextralife lists it here for SotFS; the Heavy Iron Key opens the doors at Iron Keep's Belfry Sol Approach." }),
+    i("Heavy Iron Key", "key", "fofg.lizard_pit", "Skeleton in the chamber with the last Flame Salamander (with Rebel's Greatshield). Opens the big door to Brume Tower (Crown of the Old Iron King) beyond the Old Iron King's Primal Bonfire obelisk.", { source: FEX + "Heavy+Iron+Key" }),
     i("Titanite Chunk", "titanite", "fofg.rooftops", "Fextralife lists 3x Titanite Chunk for the Forest (SotFS additions on corpses in the rooftops / lizard pit areas).", { qty: 3, note: "Fextralife's item list gives the count without an exact spot." }),
     i("Old Radiant Lifegem", "lifegem", "fofg.lizard_pit", "Fextralife's SotFS item list; found in the Flame Lizard pit area.", { note: "Listed by Fextralife without an exact spot." }),
     i("Wilted Herb", "consumable", "fofg.rotunda", "Fextralife lists 3x Wilted Herb for the Forest (SotFS corpses).", { qty: 3, note: "Listed by Fextralife without an exact spot." }),

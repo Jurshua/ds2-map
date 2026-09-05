@@ -39,7 +39,6 @@ export default finalize([3600, 4600], {
     i("Dark Armor", "armor", "gutter.melinda", "Dropped by the Mimic near Melinda's platform; collect in the lower room.", { source: WDS }),
     i("Lifegem", "lifegem", "gutter.melinda", "Jar on the wooden ramp past the sconce, on the way back toward the first bonfire."),
     i("Havel's Set", "armor", "gutter.six_sconces", "Forgotten Key door in the cave up the ladder from the six-sconce platform; jars behind the poison statues.", { prerequisites: ["Forgotten Key"] }),
-    i("Dragon Talon", "key", "gutter.six_sconces", "SotFS: also in the Forgotten Key room (Crown of the Sunken King access item).", { prerequisites: ["Forgotten Key"], source: WDS }),
     i("Dark Pyromancy Flame", "weapon", "gutter.jar_tower", "Ledge with three jars after the hole-in-the-floor drop (with 3x Rotten Pine Resin)."),
     i("Rotten Pine Resin", "consumable", "gutter.jar_tower", "Ledge with the Dark Pyromancy Flame.", { qty: 3 }),
     i("Soul of a Nameless Soldier", "soul", "gutter.jar_tower", "Jar on the top floor of the heart-jar tower."),

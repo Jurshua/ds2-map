@@ -20,7 +20,18 @@ interface Props {
   collected: Set<string>;
   onSelect(m: Marker | null): void;
   onSelectNode?(id: string): void;
+  /** Clicking inside an area polygon with nothing else under the cursor (zoomed out). */
+  onSelectArea?(id: string): void;
   className?: string;
+}
+
+function pointInPolygon(x: number, y: number, poly: [number, number][]): boolean {
+  let inside = false;
+  for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
+    const [xi, yi] = poly[i], [xj, yj] = poly[j];
+    if (yi > y !== yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) inside = !inside;
+  }
+  return inside;
 }
 
 const AREA_FILL: Record<Dlc | "base", string> = {
@@ -62,7 +73,7 @@ function areaLabelLines(name: string, wrap: boolean): string[] {
 const MAX_ZOOM = 6;
 
 export const MapCanvas = forwardRef<MapCanvasHandle, Props>(function MapCanvas(
-  { markers, selected, route, collected, onSelect, onSelectNode, className }, ref,
+  { markers, selected, route, collected, onSelect, onSelectNode, onSelectArea, className }, ref,
 ) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -460,7 +471,11 @@ export const MapCanvas = forwardRef<MapCanvasHandle, Props>(function MapCanvas(
           const hit = hitTest(p.x, p.y);
           if (hit?.m) onSelect(hit.m);
           else if (hit?.nodeId) onSelectNode?.(hit.nodeId);
-          else onSelect(null);
+          else {
+            const [wx, wy] = screenToWorld(p.x, p.y);
+            const area = vp.current.zoom < 0.85 ? areas.find((a) => pointInPolygon(wx, wy, a.shape)) : undefined;
+            if (area) onSelectArea?.(area.id); else onSelect(null);
+          }
         }
       }
     };

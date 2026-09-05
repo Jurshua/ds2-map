@@ -15,6 +15,8 @@ export interface RouteStep {
   edge: Edge | null;
   cost: number;
   warp: boolean;
+  /** For warp steps: gating you must already have cleared to have lit the destination bonfire (shortest ungated-walk from Majula). */
+  warpRequirements?: Requirement[];
 }
 
 export interface RouteResult {
@@ -22,7 +24,10 @@ export interface RouteResult {
   target: MapNode;
   steps: RouteStep[];
   total: number;
+  /** Gating on walked edges of this route. */
   requirements: Requirement[];
+  /** Gating implied by warping to bonfires that must already be lit. */
+  warpRequirements: Requirement[];
 }
 
 interface Adj {
@@ -134,6 +139,34 @@ export function dijkstra(sourceId: string, opts: RouteOptions): Dijkstra {
   return { dist, prev };
 }
 
+/**
+ * Gating needed to have reached (and lit) a bonfire at least once: the requirements along the
+ * cheapest walking route from The Far Fire in Majula with gated edges allowed and no warping.
+ */
+const unlockCache = new Map<string, Requirement[]>();
+let unlockDijkstra: Dijkstra | null = null;
+export function bonfireUnlockRequirements(bonfireId: string): Requirement[] {
+  const cached = unlockCache.get(bonfireId);
+  if (cached) return cached;
+  if (!unlockDijkstra) unlockDijkstra = dijkstra("maj.far_fire", { allowGated: true, useWarps: false });
+  const reqs: Requirement[] = [];
+  const seen = new Set<string>();
+  let cur = bonfireId;
+  let guard = 0;
+  while (cur !== "maj.far_fire" && guard++ < 500) {
+    const p = unlockDijkstra.prev.get(cur);
+    if (!p) break;
+    for (const r of p.edge?.requires ?? []) {
+      const k = r.type + ":" + r.name;
+      if (!seen.has(k)) { seen.add(k); reqs.push(r); }
+    }
+    cur = p.from;
+  }
+  reqs.reverse();
+  unlockCache.set(bonfireId, reqs);
+  return reqs;
+}
+
 function unwind(d: Dijkstra, sourceId: string, targetId: string): RouteResult | null {
   if (!d.dist.has(targetId)) return null;
   const steps: RouteStep[] = [];
@@ -141,25 +174,33 @@ function unwind(d: Dijkstra, sourceId: string, targetId: string): RouteResult | 
   while (cur !== sourceId) {
     const p = d.prev.get(cur);
     if (!p) return null;
-    steps.push({ from: nodeById.get(p.from)!, to: nodeById.get(cur)!, edge: p.edge, cost: p.cost, warp: p.warp });
+    const step: RouteStep = { from: nodeById.get(p.from)!, to: nodeById.get(cur)!, edge: p.edge, cost: p.cost, warp: p.warp };
+    if (p.warp) step.warpRequirements = bonfireUnlockRequirements(cur);
+    steps.push(step);
     cur = p.from;
   }
   steps.reverse();
   const requirements: Requirement[] = [];
+  const warpRequirements: Requirement[] = [];
   const seen = new Set<string>();
+  const seenWarp = new Set<string>();
   for (const s of steps) {
     for (const r of s.edge?.requires ?? []) {
       const k = r.type + ":" + r.name;
       if (!seen.has(k)) { seen.add(k); requirements.push(r); }
     }
+    for (const r of s.warpRequirements ?? []) {
+      const k = r.type + ":" + r.name;
+      if (!seenWarp.has(k) && !seen.has(k)) { seenWarp.add(k); warpRequirements.push(r); }
+    }
   }
-  return { source: nodeById.get(sourceId)!, target: nodeById.get(targetId)!, steps, total: d.dist.get(targetId)!, requirements };
+  return { source: nodeById.get(sourceId)!, target: nodeById.get(targetId)!, steps, total: d.dist.get(targetId)!, requirements, warpRequirements };
 }
 
 export function route(sourceId: string, targetId: string, opts: RouteOptions): RouteResult | null {
   if (sourceId === targetId) {
     const n = nodeById.get(sourceId)!;
-    return { source: n, target: n, steps: [], total: 0, requirements: [] };
+    return { source: n, target: n, steps: [], total: 0, requirements: [], warpRequirements: [] };
   }
   return unwind(dijkstra(sourceId, opts), sourceId, targetId);
 }

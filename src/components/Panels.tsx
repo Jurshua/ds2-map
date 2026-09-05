@@ -327,6 +327,9 @@ function RouteSteps({ r, onFly }: { r: RouteResult; onFly(x: number, y: number):
       {r.requirements.length > 0 && (
         <div className="flex flex-wrap gap-1"><span className="text-[11px] text-stone-400">Gating on this route:</span>{r.requirements.map((q, i) => <Req key={i} r={q} />)}</div>
       )}
+      {r.warpRequirements.length > 0 && (
+        <div className="flex flex-wrap gap-1"><span className="text-[11px] text-stone-400">Warp targets must already be lit; reaching them needed:</span>{r.warpRequirements.map((q, i) => <Req key={i} r={q} />)}</div>
+      )}
       <ol className="space-y-1.5">
         {r.steps.map((s, i) => (
           <li key={i} className="rounded border border-white/10 bg-black/30 p-2">
@@ -336,7 +339,10 @@ function RouteSteps({ r, onFly }: { r: RouteResult; onFly(x: number, y: number):
               <span className="text-xs text-stone-400"> · {areaById.get(s.to.areaId)?.name}</span>
             </button>
             {s.edge && <p className="mt-0.5 text-xs text-stone-300">{s.edge.note}{s.edge.oneWay ? " (one-way)" : ""}</p>}
-            {s.warp && <p className="mt-0.5 text-xs text-stone-400">Rest at {s.from.name} and travel.</p>}
+            {s.warp && <p className="mt-0.5 text-xs text-stone-400">Rest at {s.from.name} and travel (the destination bonfire must already be lit).</p>}
+            {s.warp && s.warpRequirements && s.warpRequirements.length > 0 && (
+              <div className="mt-1 flex flex-wrap gap-1"><span className="text-[11px] text-stone-500">First reaching it needs:</span>{s.warpRequirements.map((q, j) => <Req key={j} r={q} />)}</div>
+            )}
             {s.edge?.requires?.length ? <div className="mt-1 flex flex-wrap gap-1">{s.edge.requires.map((q, j) => <Req key={j} r={q} />)}</div> : null}
           </li>
         ))}

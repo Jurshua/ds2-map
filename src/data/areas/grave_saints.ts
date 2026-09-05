@@ -74,6 +74,5 @@ export default finalize([3600, 3900], {
     edge("grave.vanguard", "grave.rat_king", 1, "Door after the arena.", { requires: [req.boss("Royal Rat Vanguard")] }),
     edge("grave.rat_king", "grave.bridges", 2, "Hole in the floor to the fountain, then jump down the coffins to the stone bridge (one-way).", { oneWay: true, kind: "drop" }),
     edge("grave.bridges", "gutter.upper", 2, "Drop to the water pit, take the dry tunnel and the scaffolding ladders down (one-way) to the tunnel into The Gutter.", { oneWay: true, kind: "drop" }),
-    edge("grave.bridges", "maj.pit", 1, "Stairway at the far end of the wooden bridge leads back to the ledge in Majula's pit.", { kind: "walk" }),
   ],
 }, SRC);

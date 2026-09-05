@@ -35,10 +35,10 @@ export default finalize([3650, 1250], {
   npcs: [],
   features: [
     { id: "ft.winter.door", name: "Shrine of Winter door", kind: "locked-door", areaId: A, node: "winter.entrance", requires: "Four Great Souls (Primal Bonfires) or 1,000,000 Soul Memory in NG (+1M per cycle, cap 8M)", description: "Opens once the Rotten, Lost Sinner, Old Iron King and Duke's Dear Freja have been slain, or by Soul Memory earned this playthrough.", source: SRC },
-    { id: "ft.winter.obelisk", name: "Obelisk to Frozen Eleum Loyce", kind: "shortcut", areaId: A, node: "winter.entrance", requires: "Crown of the Ivory King DLC", description: "Inside the shrine; teleports to the Outer Wall of Eleum Loyce.", source: SRC },
+    { id: "ft.winter.obelisk", name: "Obelisk to Frozen Eleum Loyce", kind: "shortcut", areaId: A, node: "winter.entrance", requires: "Frozen Flower (Crown of the Ivory King DLC)", description: "Inside the shrine; teleports to the Outer Wall of Eleum Loyce once you hold the Frozen Flower.", source: SRC },
   ],
   edges: [
-    edge("winter.entrance", "eleum.entrance", 1, "Obelisk inside the shrine.", { kind: "warp", requires: [req.dlc("Crown of the Ivory King")] }),
+    edge("winter.entrance", "eleum.entrance", 1, "Obelisk inside the shrine; needs the Frozen Flower (Drangleic Castle, SotFS).", { kind: "warp", requires: [req.dlc("Crown of the Ivory King"), req.key("Frozen Flower", "Corpse in Drangleic Castle (SotFS); grants access to Frozen Eleum Loyce")] }),
     edge("winter.entrance", "winter.slope", 1, "Down the slope."),
     edge("winter.slope", "winter.soldiers", 1, "Through the tunnel and up the path."),
     edge("winter.soldiers", "winter.bridge", 1, "Past the Crystal Lizard onto the bridge."),

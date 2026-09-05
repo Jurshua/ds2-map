@@ -40,7 +40,7 @@ export const grandCathedral: AreaBundle = finalize([6550, 400], {
     { id: "npc.twiggy_shei", name: "Twiggy Shei (summon)", areaId: G, node: "gc.chaos_drop", role: "summon", description: "Summon sign near the Old Chaos drop.", source: GSRC },
   ],
   features: [
-    { id: "ft.gc.flower_door", name: "Frozen Flower door", kind: "locked-door", areaId: G, node: "gc.bonfire", requires: "Frozen Flower", description: "Cathedral doors at the top of Eleum Loyce; the flower is on a corpse in Drangleic Castle (SotFS).", source: GSRC },
+    { id: "ft.gc.doors", name: "Grand Cathedral doors", kind: "locked-door", areaId: G, node: "gc.bonfire", requires: "Aava, the King's Pet defeated", description: "Doors at the top of the stairs beyond Aava's arena; open once the King's Pet is slain.", source: GSRC },
     { id: "ft.gc.melt", name: "Alsanna melts the ice", kind: "lever", areaId: G, node: "gc.alsanna", description: "Agreeing to help clears the ice walls, chests and paths across Frozen Eleum Loyce and opens the way to the Old Chaos.", source: GSRC },
   ],
   edges: [
