@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import { Glyph } from "./Glyph";
 import { CATEGORIES, GROUPS, categoryById, markers, markersByNode, areaById, nodeById, type Marker } from "@/lib/markers";
 import { search, labelForMarker, type SearchHit } from "@/lib/search";
-import { bosses, enemies, DESPAWN_NOTE, npcs } from "@/data";
+import { bosses, enemies, DESPAWN_NOTE, npcs, areaMapById } from "@/data";
 import type { Bonfire, Boss, Item, Npc, Feature, Enemy, Requirement } from "@/data/types";
 import type { RouteResult, RouteOptions } from "@/lib/graph";
 
@@ -126,6 +126,7 @@ export function LegendFilters({ filters, onChange, counts, collectedCount, total
           ))}
         </ul>
         <p className="mt-2 text-stone-400">Lines: gold = between areas, faint = inside an area, dashed = needs a key / branch / lockstone / boss. Numbers at low zoom = uncollected markers at that landmark.</p>
+        <p className="mt-2 text-stone-400"><span className="text-stone-300">Floor plans</span> (open one from an area&apos;s <em>plan</em> button): tan = interior, green = open ground, blue = water, orange = lava, black = pit. Hatched strip with an arrow = stairs (arrow points up), rungs = ladder, boxed ⇅ = lift, glowing dashed white = fog gate, gold line with a lock = locked door, grey dotted = illusory wall, red dashed arrow = one-way drop. Click stairs, ladders, lifts and drops to change floor; faint outlines are the other floors.</p>
       </details>
     </div>
   );
@@ -137,7 +138,7 @@ function Req({ r }: { r: Requirement }) {
   return <span className={"inline-block rounded px-1.5 py-0.5 text-[11px] " + color} title={r.note}>{r.type}: {r.name}{r.note ? ` — ${r.note}` : ""}</span>;
 }
 
-export function Details({ marker, collected, onToggleCollected, onRouteFrom, onRouteTo, onSelect, onFly }: {
+export function Details({ marker, collected, onToggleCollected, onRouteFrom, onRouteTo, onSelect, onFly, onOpenPlan }: {
   marker: Marker;
   collected: Set<string>;
   onToggleCollected(id: string): void;
@@ -145,6 +146,8 @@ export function Details({ marker, collected, onToggleCollected, onRouteFrom, onR
   onRouteTo(m: Marker): void;
   onSelect(m: Marker): void;
   onFly(m: Marker): void;
+  /** Open the area's floor plan centred on this marker (only offered when a plan exists). */
+  onOpenPlan?(areaId: string): void;
 }) {
   const area = areaById.get(marker.areaId);
   const node = nodeById.get(marker.nodeId);
@@ -165,6 +168,7 @@ export function Details({ marker, collected, onToggleCollected, onRouteFrom, onR
         <button className="btn" onClick={() => onRouteFrom(marker)}>Route from here</button>
         <button className="btn" onClick={() => onRouteTo(marker)}>Route to here</button>
         <button className="btn" onClick={() => onFly(marker)}>Fly to</button>
+        {onOpenPlan && areaMapById.has(marker.areaId) && <button className="btn" onClick={() => onOpenPlan(marker.areaId)} title="Show this marker on the area's floor plan">Floor plan</button>}
       </div>
       {marker.kind === "item" && <ItemDetails item={rec as Item} collected={collected} onToggle={onToggleCollected} />}
       {marker.kind === "bonfire" && <p className="text-stone-200">{(rec as Bonfire).note}{(rec as Bonfire).primal ? " Primal bonfires only warp you back to Majula." : ""}</p>}
@@ -265,7 +269,7 @@ export type Destination =
   | { type: "farm"; enemyId: string; label?: string }
   | { type: "marker"; id: string };
 
-export function RoutePanel({ start, dest, opts, result, onSetDest, onSetOpts, onClear, onSelect, onFly }: {
+export function RoutePanel({ start, dest, opts, result, onSetDest, onSetOpts, onClear, onSelect, onFlyNode }: {
   start: Marker | null;
   dest: Destination | null;
   opts: RouteOptions;
@@ -274,7 +278,7 @@ export function RoutePanel({ start, dest, opts, result, onSetDest, onSetOpts, on
   onSetOpts(o: RouteOptions): void;
   onClear(): void;
   onSelect(m: Marker): void;
-  onFly(x: number, y: number): void;
+  onFlyNode(id: string): void;
 }) {
   const farmOptions = useMemo(() => enemies.flatMap((e) => e.drops.map((d) => ({ enemyId: e.id, label: `${d.item} — ${e.name}` }))).sort((a, b) => a.label.localeCompare(b.label)), []);
   const bossOptions = useMemo(() => [...bosses].sort((a, b) => a.name.localeCompare(b.name)), []);
@@ -314,13 +318,13 @@ export function RoutePanel({ start, dest, opts, result, onSetDest, onSetOpts, on
         <label className="flex items-center gap-1.5"><input type="checkbox" checked={opts.allowGated} onChange={(e) => onSetOpts({ ...opts, allowGated: e.target.checked })} /> Allow gated paths (keys, branches…)</label>
       </div>
       {result === "none" && <p className="rounded border border-red-300/30 bg-red-900/20 p-2 text-xs text-red-100">No route found with these options. Try allowing gated paths or bonfire warping.</p>}
-      {result && result !== "none" && <RouteSteps r={result} onFly={onFly} />}
+      {result && result !== "none" && <RouteSteps r={result} onFlyNode={onFlyNode} />}
       {(start || dest) && <button className="btn" onClick={onClear}>Clear route</button>}
     </div>
   );
 }
 
-function RouteSteps({ r, onFly }: { r: RouteResult; onFly(x: number, y: number): void }) {
+function RouteSteps({ r, onFlyNode }: { r: RouteResult; onFlyNode(id: string): void }) {
   return (
     <div className="space-y-2">
       <p className="text-xs text-stone-300"><span className="text-amber-100">{r.source.name}</span> → <span className="text-amber-100">{r.target.name}</span> · {r.steps.length} steps · cost {r.total}</p>
@@ -333,7 +337,7 @@ function RouteSteps({ r, onFly }: { r: RouteResult; onFly(x: number, y: number):
       <ol className="space-y-1.5">
         {r.steps.map((s, i) => (
           <li key={i} className="rounded border border-white/10 bg-black/30 p-2">
-            <button className="link text-left" onClick={() => onFly(s.to.x, s.to.y)}>
+            <button className="link text-left" onClick={() => onFlyNode(s.to.id)}>
               <span className="mr-1 text-stone-400">{i + 1}.</span>
               {s.warp ? <span className="text-sky-200">Warp to {s.to.name}</span> : <span>{s.to.name}</span>}
               <span className="text-xs text-stone-400"> · {areaById.get(s.to.areaId)?.name}</span>
@@ -352,7 +356,7 @@ function RouteSteps({ r, onFly }: { r: RouteResult; onFly(x: number, y: number):
 }
 
 /* ---------------- Area browser ---------------- */
-export function AreaList({ onFlyArea, onSelect, collected, filtered }: { onFlyArea(id: string): void; onSelect(m: Marker): void; collected: Set<string>; filtered: Set<string> }) {
+export function AreaList({ onFlyArea, onOpenPlan, onSelect, collected, filtered }: { onFlyArea(id: string): void; onOpenPlan(id: string): void; onSelect(m: Marker): void; collected: Set<string>; filtered: Set<string> }) {
   const [openArea, setOpenArea] = useState<string | null>(null);
   const byArea = useMemo(() => {
     const m = new Map<string, Marker[]>();
@@ -370,6 +374,7 @@ export function AreaList({ onFlyArea, onSelect, collected, filtered }: { onFlyAr
             <div className="flex items-center gap-2 px-2 py-1">
               <button className="flex-1 text-left font-serif text-amber-100" onClick={() => setOpenArea(open ? null : a.id)} aria-expanded={open}>{a.name}{a.dlc ? <span className="ml-1 text-[10px] text-sky-200">DLC</span> : null}</button>
               <span className="text-[11px] text-stone-400">{ms.length}</span>
+              {areaMapById.has(a.id) && <button className="btn !px-1.5 !py-0" onClick={() => onOpenPlan(a.id)} aria-label={`Open the floor plan of ${a.name}`} title="Floor plan">plan</button>}
               <button className="btn !px-1.5 !py-0" onClick={() => onFlyArea(a.id)} aria-label={`Fly to ${a.name}`}>go</button>
             </div>
             {open && (
