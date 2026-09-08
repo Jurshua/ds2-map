@@ -42,6 +42,7 @@ import ironPassage from "./areas/iron_passage";
 import eleum from "./areas/eleum";
 import { grandCathedral, oldChaos, frigidOutskirts } from "./areas/ivory_small";
 import { enemies as enemyList, DESPAWN_NOTE } from "./enemies";
+import { areaMaps, areaMapById, validateAreaMaps } from "./areamaps";
 
 export const bundles: AreaBundle[] = [
   thingsBetwixt, majula, fofg, heides, cathedralBlue, wharf, bastille, belfryLuna, sinnersRise,
@@ -60,7 +61,7 @@ export const npcs: Npc[] = bundles.flatMap((b) => b.npcs);
 export const features: Feature[] = bundles.flatMap((b) => b.features);
 export const edges: Edge[] = bundles.flatMap((b) => b.edges);
 export const enemies: Enemy[] = enemyList;
-export { DESPAWN_NOTE };
+export { DESPAWN_NOTE, areaMaps, areaMapById };
 
 export const areaById = new Map(areas.map((a) => [a.id, a]));
 export const nodeById = new Map(nodes.map((n) => [n.id, n]));
@@ -89,6 +90,7 @@ export function validate(): string[] {
   for (const a of areas) for (const c of a.connections) if (!areaIds.has(c)) problems.push(`area ${a.id} connects to unknown area ${c}`);
   const recs = [...bonfires, ...bosses, ...items, ...npcs, ...features, ...enemies, ...areas];
   for (const r of recs) if (!r.source) problems.push(`record without source: ${JSON.stringify(r).slice(0, 80)}`);
+  problems.push(...validateAreaMaps(nodes, areaIds));
   return problems;
 }
 
@@ -102,4 +104,5 @@ export const counts = {
   features: features.length,
   edges: edges.length,
   enemies: enemies.length,
+  areaMaps: areaMaps.length,
 };

@@ -1,0 +1,926 @@
+{
+  "verified": "2026-09-07",
+  "sources": {
+    "kouryakubo": {
+      "name": "Dark Souls 2 Kouryakubo (JP strategy wiki, 'map-included wiki')",
+      "home": "http://www.kouryakubo.com/darksouls2/",
+      "imageBase": "http://www.kouryakubo.com/darksouls2/image/maps/",
+      "coverage": "45/45 areas (51 sheets incl. overviews)",
+      "typicalResolution": "460x660 to 1225x995 PNG, ~75-300 KB",
+      "style": "Clean vector-style floor plans, per-floor, numbered item markers, ladder/elevator/fog-door/drop-direction/switch-and-door glyphs, enemy icons",
+      "language": "Japanese",
+      "licence": "RESTRICTED - each image is stamped '(C) DARK SOULS 2 Kouryakubo ... Don't copy all kouryakubo's maps.' Do NOT mirror, hotlink or redistribute. Reference-only."
+    },
+    "fextralife": {
+      "name": "Fextralife Dark Souls 2 Wiki",
+      "home": "https://darksouls2.wiki.fextralife.com/Maps",
+      "imageBase": "https://static0.fextralifeimages.com/file/darksouls2/",
+      "coverage": "26 sheets covering 33/45 areas (4 areas share a neighbour's sheet)",
+      "typicalResolution": "565x565 PNG, ~290-330 KB (legend occupies ~40% of the width)",
+      "style": "Dark top-down plates with a numbered item legend and ladder/jump/bonfire/boss/fog-door/locked-door/no-return-door icons",
+      "language": "English",
+      "licence": "RESTRICTED - Valnet Inc. terms reserve all rights; no CC licence is published for wiki images. Reference-only; contact legal@valnetinc.com to clear reuse.",
+      "legendIcons": [
+        "https://static0.fextralifeimages.com/file/darksouls2/b/b0/Icon_00.png",
+        "https://static0.fextralifeimages.com/file/darksouls2/8/85/Icon_01.png",
+        "https://static0.fextralifeimages.com/file/darksouls2/4/43/Icon_02.png",
+        "https://static0.fextralifeimages.com/file/darksouls2/1/14/Icon_03.png",
+        "https://static0.fextralifeimages.com/file/darksouls2/6/6f/Icon_04.png",
+        "https://static0.fextralifeimages.com/file/darksouls2/b/b3/Icon_05.png",
+        "https://static0.fextralifeimages.com/file/darksouls2/8/85/Icon_06.png",
+        "https://static0.fextralifeimages.com/file/darksouls2/2/26/Icon_07.png"
+      ],
+      "worldMaps": {
+        "sotfs": {
+          "url": "https://static0.fextralifeimages.com/file/darksouls2/e/e5/Ds2sotfs_map.png",
+          "w": 1920,
+          "h": 1080
+        },
+        "drangleic_2100x1600": {
+          "url": "https://static0.fextralifeimages.com/file/darksouls2/a/aa/Dark_Souls_2_Map_.png",
+          "w": 2100,
+          "h": 1600
+        },
+        "bonfires_2722x1282": {
+          "url": "https://static0.fextralifeimages.com/file/darksouls2/8/8c/Bonfire_Map.png",
+          "w": 2722,
+          "h": 1282
+        },
+        "drangleic_with_dlc": {
+          "url": "https://static0.fextralifeimages.com/file/darksouls2/6/65/Drangleic_map_dlc.png",
+          "w": 1920,
+          "h": 1280
+        },
+        "dlc_area_links": {
+          "url": "https://static0.fextralifeimages.com/file/darksouls2/7/7f/DS2map3_with_DLC_area_links.png",
+          "w": 1920,
+          "h": 1080
+        },
+        "community_1278x602": {
+          "url": "https://static0.fextralifeimages.com/file/darksouls2/b/be/1395089745754.png",
+          "w": 1278,
+          "h": 602
+        }
+      }
+    },
+    "wiki_gg": {
+      "name": "Dark Souls II Wiki (wiki.gg)",
+      "home": "https://darksouls2.wiki.gg/",
+      "api": "https://darksouls2.wiki.gg/api.php",
+      "coverage": "NO area maps (verified via allimages + File-namespace search)",
+      "usefulFor": "1920x1080 in-engine area screenshots, enemy and item art",
+      "licence": "CC BY-SA 4.0 - the only freely reusable source found. Attribution + share-alike required."
+    },
+    "game_geometry": {
+      "name": "Game geometry via Smithbox / DSMapStudio",
+      "smithbox": "https://github.com/vawser/Smithbox",
+      "dsmapstudio": "https://github.com/soulsmods/DSMapStudio",
+      "uxm": "https://www.nexusmods.com/sekiro/mods/26",
+      "mapNames": "https://github.com/vawser/Smithbox/blob/main/src/Smithbox.Data/Assets/Aliases/DS2S/MapNames.json",
+      "paramRowNames": "https://github.com/vawser/Smithbox/tree/main/src/Smithbox.Data/Assets/PARAM/DS2S/Param%20Row%20Names/English",
+      "licence": "Tooling is MIT. Renders you produce are your own derivative of game assets (fair-use posture identical to every Souls wiki map).",
+      "note": "Only route that yields original, licence-clean, coordinate-accurate maps."
+    }
+  },
+  "areas": [
+    {
+      "areaId": "aerie",
+      "name": "Dragon Aerie",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map30_dragonaerie.png",
+          "w": 741,
+          "h": 448
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/1/12/Dragon_aerie_and_dragon_shrine_dark_souls_2_wiki_guide_565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": "One Fextralife sheet covers Aerie + Shrine; JP splits them."
+    },
+    {
+      "areaId": "aldias",
+      "name": "Aldia's Keep",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map29_aldiaskeep.png",
+          "w": 665,
+          "h": 716
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/5/5f/Aldias_keep_dark_souls_2_wiki_guide_565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    },
+    {
+      "areaId": "amana",
+      "name": "Shrine of Amana",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map27_shrineofamana.png",
+          "w": 804,
+          "h": 887
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/1/1f/Shrine_of_amana_dark_souls_2_wiki_guide_565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    },
+    {
+      "areaId": "bastille",
+      "name": "The Lost Bastille",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map07_lostbastille.png",
+          "w": 749,
+          "h": 496
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/a/ac/Lost_bastille_map_dark_souls2_wiki_guide565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    },
+    {
+      "areaId": "belfry_luna",
+      "name": "Belfry Luna",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map08_belfryluna.png",
+          "w": 414,
+          "h": 292
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/a/ac/Lost_bastille_map_dark_souls2_wiki_guide565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": false,
+      "note": "Fextralife has no separate sheet; it reuses the Lost Bastille map. JP has a dedicated one."
+    },
+    {
+      "areaId": "belfry_sol",
+      "name": "Belfry Sol",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map15_belfrysol.png",
+          "w": 392,
+          "h": 283
+        }
+      ],
+      "fextralife": null,
+      "fextralifeDedicatedSheet": false,
+      "note": "JP only."
+    },
+    {
+      "areaId": "cathedral_blue",
+      "name": "Cathedral of Blue",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map05_cathedralofblue.png",
+          "w": 465,
+          "h": 272
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/a/a2/Heides_tower_of_flame_map_dark_souls2_wiki_guide565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": false,
+      "note": "Fextralife has no separate sheet; it reuses the Heide's map. JP has a dedicated one."
+    },
+    {
+      "areaId": "chasm",
+      "name": "Dark Chasm of Old",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map25_darkchasmofoldest.png",
+          "w": 826,
+          "h": 353
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/0/08/Dark_chasm_of_old_dark_souls_2_wiki_guide_565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    },
+    {
+      "areaId": "copse",
+      "name": "Huntsman's Copse",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map10_huntsmanscopse.png",
+          "w": 806,
+          "h": 686
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/9/9b/Huntsmans_copse_map_dark_souls2_wiki_guide565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    },
+    {
+      "areaId": "crypt",
+      "name": "Undead Crypt",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map28_undeadcrypt.png",
+          "w": 609,
+          "h": 506
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/9/90/Undead_crypt_dark_souls_2_wiki_guide_565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    },
+    {
+      "areaId": "drangleic",
+      "name": "Drangleic Castle",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map24_drangleiccastle.png",
+          "w": 643,
+          "h": 636
+        },
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map26_kingspassage.png",
+          "w": 370,
+          "h": 395
+        },
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map405_memoryoftheking.png",
+          "w": 369,
+          "h": 211
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/2/28/Drangleic_castle_dark_souls_2_wiki_guide_565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": "JP splits King's Passage and Memory of the King onto their own sheets."
+    },
+    {
+      "areaId": "dshrine",
+      "name": "Dragon Shrine",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map31_dragonshrine.png",
+          "w": 476,
+          "h": 895
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/1/12/Dragon_aerie_and_dragon_shrine_dark_souls_2_wiki_guide_565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": "One Fextralife sheet covers Aerie + Shrine; JP splits them."
+    },
+    {
+      "areaId": "earthen",
+      "name": "Earthen Peak",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map13_earthenpeak.png",
+          "w": 605,
+          "h": 603
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/c/c3/Earthen_peak_map_dark_souls2_wiki_guide565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    },
+    {
+      "areaId": "fofg",
+      "name": "Forest of Fallen Giants",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map03_forestoffallengiant.png",
+          "w": 915,
+          "h": 745
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/d/d7/Forest_of_fallen_giants_map_dark_souls2_wiki_guide565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    },
+    {
+      "areaId": "grave_saints",
+      "name": "Grave of Saints",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map16_graveofsaints.png",
+          "w": 702,
+          "h": 421
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/1/12/Grave_of_giants_map_dark_souls2_wiki_guide565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    },
+    {
+      "areaId": "gulch",
+      "name": "Black Gulch",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map18_blackgulch.png",
+          "w": 417,
+          "h": 453
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/3/3c/The_gutter_map_dark_souls2_wiki_guide565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": false,
+      "note": "Fextralife has no separate sheet; it reuses The Gutter map. JP has a dedicated one."
+    },
+    {
+      "areaId": "gutter",
+      "name": "The Gutter",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map17_thegutter.png",
+          "w": 662,
+          "h": 587
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/3/3c/The_gutter_map_dark_souls2_wiki_guide565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    },
+    {
+      "areaId": "harvest",
+      "name": "Harvest Valley",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map12_harvestvalley.png",
+          "w": 626,
+          "h": 390
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/3/37/Harvest_valley_map_dark_souls2_wiki_guide565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    },
+    {
+      "areaId": "heides",
+      "name": "Heide's Tower of Flame",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map04_heide'stowerofflame.png",
+          "w": 643,
+          "h": 757
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/a/a2/Heides_tower_of_flame_map_dark_souls2_wiki_guide565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    },
+    {
+      "areaId": "iron_keep",
+      "name": "Iron Keep",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map14_ironkeep.png",
+          "w": 776,
+          "h": 493
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/f/fb/Iron_keep_dark_souls_2_wiki_guide_565px.png",
+        "w": null,
+        "h": null
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    },
+    {
+      "areaId": "lords_chamber",
+      "name": "Lord's Private Chamber",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map22_loadsprivatechamber.png",
+          "w": 356,
+          "h": 170
+        }
+      ],
+      "fextralife": null,
+      "fextralifeDedicatedSheet": false,
+      "note": "JP only (filename misspells 'lords' as 'loads')."
+    },
+    {
+      "areaId": "majula",
+      "name": "Majula",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map02_madura.png",
+          "w": 732,
+          "h": 695
+        },
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map02_madura_holl.png",
+          "w": 725,
+          "h": 378
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/8/84/Majula_map_dark_souls2_wiki_guide565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": "JP has a second sheet for the Pit descent (map02_madura_holl)."
+    },
+    {
+      "areaId": "mem_jeigh",
+      "name": "Memory of Jeigh",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map35_memoryofjeigh.png",
+          "w": 505,
+          "h": 215
+        },
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map32_dragonmemories.png",
+          "w": 355,
+          "h": 253
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/0/09/Memories_dark_souls_2_wiki_guide_565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": "map32 is the shared 'giant memories' overview sheet."
+    },
+    {
+      "areaId": "mem_orro",
+      "name": "Memory of Orro",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map33_memoryoforro.png",
+          "w": 656,
+          "h": 303
+        },
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map32_dragonmemories.png",
+          "w": 355,
+          "h": 253
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/0/09/Memories_dark_souls_2_wiki_guide_565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    },
+    {
+      "areaId": "mem_vammar",
+      "name": "Memory of Vammar",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map34_memoryofvammar.png",
+          "w": 360,
+          "h": 515
+        },
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map32_dragonmemories.png",
+          "w": 355,
+          "h": 253
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/0/09/Memories_dark_souls_2_wiki_guide_565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    },
+    {
+      "areaId": "pharros",
+      "name": "Doors of Pharros",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map20_doorsofpharos.png",
+          "w": 637,
+          "h": 510
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/9/98/Doors_of_pharros_dark_souls_2_wiki_guide_565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    },
+    {
+      "areaId": "purgatory",
+      "name": "Undead Purgatory",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map11_undeadpurgatory.png",
+          "w": 509,
+          "h": 272
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/9/9b/Huntsmans_copse_map_dark_souls2_wiki_guide565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": false,
+      "note": "Fextralife has no separate sheet; it reuses the Huntsman's Copse map. JP has a dedicated one."
+    },
+    {
+      "areaId": "shaded",
+      "name": "Shaded Woods",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map19_shadedwoods.png",
+          "w": 1003,
+          "h": 737
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/2/21/Shaded_woods_dark_souls_2_wiki_guide_565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    },
+    {
+      "areaId": "sinners_rise",
+      "name": "Sinners' Rise",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map09_sinnersrise.png",
+          "w": 384,
+          "h": 605
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/c/cb/Sinner%27s_rise_dark_souls_2_wiki_guide_565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    },
+    {
+      "areaId": "things_betwixt",
+      "name": "Things Betwixt",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map01_betwixt.png",
+          "w": 689,
+          "h": 463
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/e/e3/Things_betwixt_map_dark_souls2_wiki_guide565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    },
+    {
+      "areaId": "throne",
+      "name": "Throne of Want",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map36_throneofwant.png",
+          "w": 387,
+          "h": 660
+        }
+      ],
+      "fextralife": null,
+      "fextralifeDedicatedSheet": false,
+      "note": "JP only."
+    },
+    {
+      "areaId": "tseldora",
+      "name": "Brightstone Cove Tseldora",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map21_brightstonecovetseldora.png",
+          "w": 678,
+          "h": 752
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/d/d6/Brightstone_cove_tseldora_dark_souls_2_wiki_guide_565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    },
+    {
+      "areaId": "wharf",
+      "name": "No-man's Wharf",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map06_nomanswharf.png",
+          "w": 604,
+          "h": 537
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/3/34/No_mans_wharf_dark_souls_2_wiki_guide_565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    },
+    {
+      "areaId": "winter",
+      "name": "Shrine of Winter",
+      "dlc": null,
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map23_shrineofwinter.png",
+          "w": 478,
+          "h": 301
+        }
+      ],
+      "fextralife": null,
+      "fextralifeDedicatedSheet": false,
+      "note": "JP only."
+    },
+    {
+      "areaId": "brume",
+      "name": "Brume Tower",
+      "dlc": "iron",
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map201_brumetower.png",
+          "w": 977,
+          "h": 820
+        }
+      ],
+      "fextralife": null,
+      "fextralifeDedicatedSheet": false,
+      "note": "JP only. Verified 977x820, multi-floor plan."
+    },
+    {
+      "areaId": "iron_passage",
+      "name": "Iron Passage",
+      "dlc": "iron",
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map202_ironpassage.png",
+          "w": 370,
+          "h": 402
+        }
+      ],
+      "fextralife": null,
+      "fextralifeDedicatedSheet": false,
+      "note": "JP only."
+    },
+    {
+      "areaId": "mem_oik",
+      "name": "Memory of the Old Iron King",
+      "dlc": "iron",
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map203_memoryoftheoldironking.png",
+          "w": 487,
+          "h": 353
+        }
+      ],
+      "fextralife": null,
+      "fextralifeDedicatedSheet": false,
+      "note": "JP only."
+    },
+    {
+      "areaId": "eleum",
+      "name": "Frozen Eleum Loyce",
+      "dlc": "ivory",
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map301_frozeneleumloyce.png",
+          "w": 1192,
+          "h": 994
+        }
+      ],
+      "fextralife": null,
+      "fextralifeDedicatedSheet": false,
+      "note": "JP only. Verified 1192x994 - largest area sheet."
+    },
+    {
+      "areaId": "frigid",
+      "name": "Frigid Outskirts",
+      "dlc": "ivory",
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map304_frgidoutskirts.png",
+          "w": 2040,
+          "h": 1151
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/a/a4/Outskirts.png",
+        "w": 1186,
+        "h": 586
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": "JP filename misspells 'frigid' as 'frgid'. Fextralife sheet is a plain overview, not a floor plan."
+    },
+    {
+      "areaId": "grand_cath",
+      "name": "Grand Cathedral",
+      "dlc": "ivory",
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map302_grandcathedral.png",
+          "w": 357,
+          "h": 358
+        }
+      ],
+      "fextralife": null,
+      "fextralifeDedicatedSheet": false,
+      "note": "JP only."
+    },
+    {
+      "areaId": "old_chaos",
+      "name": "Old Chaos",
+      "dlc": "ivory",
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map303_theoldchaos.png",
+          "w": 356,
+          "h": 269
+        }
+      ],
+      "fextralife": null,
+      "fextralifeDedicatedSheet": false,
+      "note": "JP only."
+    },
+    {
+      "areaId": "cave_dead",
+      "name": "Cave of the Dead",
+      "dlc": "sunken",
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map104_caveofthedead.png",
+          "w": 490,
+          "h": 338
+        }
+      ],
+      "fextralife": null,
+      "fextralifeDedicatedSheet": false,
+      "note": "JP only."
+    },
+    {
+      "areaId": "drest",
+      "name": "Dragon's Rest",
+      "dlc": "sunken",
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map103_dragonsrest.png",
+          "w": 394,
+          "h": 556
+        }
+      ],
+      "fextralife": null,
+      "fextralifeDedicatedSheet": false,
+      "note": "JP only."
+    },
+    {
+      "areaId": "sanctum",
+      "name": "Dragon's Sanctum",
+      "dlc": "sunken",
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map102_dragonssanctrum.png",
+          "w": 867,
+          "h": 679
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/1/1a/Dragons_sanctum_dark_souls_2_wiki_guide_565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    },
+    {
+      "areaId": "shulva",
+      "name": "Shulva, Sanctum City",
+      "dlc": "sunken",
+      "kouryakubo": [
+        {
+          "url": "http://www.kouryakubo.com/darksouls2/image/maps/map101_shulvasanctumcity.png",
+          "w": 464,
+          "h": 662
+        }
+      ],
+      "fextralife": {
+        "url": "https://static0.fextralifeimages.com/file/darksouls2/5/5e/Shulva_sanctum_city_dark_souls_2_wiki_guide_565px.png",
+        "w": 565,
+        "h": 565
+      },
+      "fextralifeDedicatedSheet": true,
+      "note": null
+    }
+  ],
+  "$comment": "Catalogue of external per-area map references for the DS2 SotFS guide. URLs are REFERENCES, not assets to redistribute - see docs/AREA-MAPS-RESEARCH.md for the licence position on each source. Verified 2026-09-07.",
+  "allUrlsVerified200": "2026-09-07 (88/88)"
+}

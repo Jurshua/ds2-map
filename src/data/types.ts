@@ -186,3 +186,59 @@ export interface Edge {
   /** Kind of connection for styling. */
   kind?: "walk" | "drop" | "shortcut" | "warp" | "ship" | "elevator" | "ladder";
 }
+
+/* ---------------- Per-area floor plans ---------------- */
+
+/** A point in an area map's local space: x right, y down, roughly one unit per metre. */
+export type Pt = [number, number];
+
+export type RoomKind = "interior" | "open" | "ruin" | "water" | "lava" | "void";
+
+/** One walkable outline on a floor (a room, courtyard, corridor, pool of lava, pit shaft…). */
+export interface Room {
+  id: string;
+  /** Short label drawn at the centroid when zoomed in. */
+  name?: string;
+  kind: RoomKind;
+  outline: Pt[];
+}
+
+export type FloorFeatureKind =
+  | "stairs" | "ladder" | "elevator" | "fog" | "door" | "locked-door" | "illusory-wall" | "drop" | "lever" | "bridge" | "note";
+
+export interface FloorFeature {
+  kind: FloorFeatureKind;
+  /** One point for icons; two or more for lines and strips. For stairs and drops the first point is the bottom / ledge and the last the top / landing. */
+  pts: Pt[];
+  label?: string;
+  /** Floor this stair, ladder, elevator or drop leads to; clicking it switches floors. */
+  toFloor?: string;
+}
+
+export interface Floor {
+  id: string;
+  name: string;
+  /** Vertical order; larger is higher. The UI lists floors top to bottom. */
+  level: number;
+  rooms: Room[];
+  features: FloorFeature[];
+}
+
+export interface NodePlacement { x: number; y: number; floor: string }
+
+/**
+ * Hand-drawn floor plan of one area. Local coordinates are independent of the world schematic;
+ * every routing node of the area gets a position here so markers, items and routes carry over.
+ */
+export interface AreaMap {
+  areaId: string;
+  width: number;
+  height: number;
+  floors: Floor[];
+  /** Position of every routing node of the area inside the plan. */
+  positions: Record<string, NodePlacement>;
+  /** Where the geometry was drawn from. Links only; nothing external is embedded. */
+  references: string[];
+  /** What is simplified or unverified. */
+  note?: string;
+}
